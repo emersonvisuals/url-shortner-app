@@ -1,5 +1,6 @@
 import generateURL from "./api";
-import './styles/main.scss'
-console.log('hello');
+import './styles/main.scss';
+import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 
-console.log(generateURL);
+const bgBoostDesktopConst = document.querySelector('.bg-boost-desktop')
+bgBoostDesktopConst.src = bgBoostDesktop
