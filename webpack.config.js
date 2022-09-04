@@ -9,9 +9,9 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"), 
-        filename: "[name].[contenthash].js",
+        filename: "[name][contenthash].js",
         clean: true,
-        assetModuleFilename: '[name].[ext]'
+        assetModuleFilename: '[name][ext]', 
     },
     watch: true,
     devtool: 'source-map',
@@ -43,7 +43,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|pdf|gif)$/i,
-                type: 'asset/resource',
+                type: 'asset/resource', 
             },
         ],
     },

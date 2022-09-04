@@ -2,24 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/api.js":
-/*!********************!*\
-  !*** ./src/api.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function generateURL() {
-  console.log("URL file");
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateURL);
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
@@ -39,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: poppins;\n  margin: 0;\n  padding: 2rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/__variables.scss"],"names":[],"mappings":"AAEA;EACI,oBCOS;EDNT,SAAA;EACA,aAAA;AADJ","sourcesContent":["@import \"./_variables\";\r\n\r\nbody {\r\n    font-family: $fontFamily;\r\n    margin: 0;\r\n    padding: 2rem;\r\n}","$cyan: hsl(180, 66%, 49%);\r\n$darkViolet: hsl(257, 27%, 26%);\r\n$red: hsl(0, 87%, 67%);\r\n$gray: hsl(0, 0%, 75%);\r\n$grayishViolet: hsl(257, 7%, 63%);\r\n$veryDarkBlue: hsl(255, 11%, 22%);\r\n$veryDarkViolet: hsl(260, 8%, 14%);\r\n\r\n$fontSize: 18px; \r\n$fontSizeTwo: 11px;\r\n$fontFamily: poppins; \r\n\r\n\r\n\r\n\r\n\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: poppins;\n  margin: 0;\n  padding: 0;\n}\n\nheader {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 2rem 3rem;\n}\nheader .boxOne {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nheader .boxOne ul.list {\n  display: flex;\n}\nheader .boxOne ul.list li {\n  padding: 0 1rem;\n  list-style: none;\n}\nheader .boxOne ul.list li a {\n  text-decoration: none;\n  color: hsl(257deg, 7%, 63%);\n  text-transform: capitalize;\n}\nheader .boxOne ul.list li a:hover {\n  transition: 0.25s all;\n  color: hsl(257deg, 27%, 26%);\n}\nheader .boxTwo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nheader .boxTwo button.login {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  background-color: transparent;\n  color: hsl(257deg, 7%, 63%);\n  padding: 0 2rem;\n}\nheader .boxTwo button.signUp {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/__variables.scss"],"names":[],"mappings":"AAEA;EACI,oBCSS;EDRT,SAAA;EACA,UAAA;AADJ;;AAIA;EACI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,kBCGmB;ADJvB;AAGI;ECiBA,aAAA;EACA,mBAAA;EACA,uBAAA;ADjBJ;AACQ;EACI,aAAA;AACZ;AACY;EACI,eAAA;EACA,gBAAA;AAChB;AACgB;EACI,qBAAA;EACA,2BCtBJ;EDuBI,0BAAA;AACpB;AAEgB;EACI,qBAAA;EACA,4BC/BP;AD+Bb;AAMI;ECPA,aAAA;EACA,mBAAA;EACA,uBAAA;ADIJ;AAIQ;ECvBJ,uCAlBG;EAmBH,YAAA;EACA,YAbI;EAcJ,0BAAA;EACA,eAXY;EAYZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EDgBQ,6BAAA;EACA,2BCxCI;EDyCJ,eAAA;AAOZ;AAJQ;EC9BJ,uCAlBG;EAmBH,YAAA;EACA,YAbI;EAcJ,0BAAA;EACA,eAXY;EAYZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;ADqCJ","sourcesContent":["@import \"./_variables\";\r\n\r\nbody {\r\n    font-family: $fontFamily;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nheader {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    padding: $desktopHeaderPadding;\r\n\r\n    .boxOne {\r\n        @include flexOne;\r\n\r\n        ul.list {\r\n            display: flex;\r\n\r\n            li {\r\n                padding: 0 1rem;\r\n                list-style: none;\r\n\r\n                a {\r\n                    text-decoration: none;\r\n                    color: $grayishViolet;\r\n                    text-transform: capitalize;\r\n                }\r\n\r\n                a:hover {\r\n                    transition: 0.25s all;\r\n                    color: $darkViolet\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    .boxTwo {\r\n        @include flexOne;\r\n\r\n        button.login {\r\n            @include button;\r\n            background-color: transparent;\r\n            color: $grayishViolet;\r\n            padding: 0 2rem;\r\n        }\r\n\r\n        button.signUp {\r\n            @include button\r\n        }\r\n    }\r\n}","$cyan: hsl(180, 66%, 49%);\r\n$darkViolet: hsl(257, 27%, 26%);\r\n$red: hsl(0, 87%, 67%);\r\n$gray: hsl(0, 0%, 75%);\r\n$grayishViolet: hsl(257, 7%, 63%);\r\n$veryDarkBlue: hsl(255, 11%, 22%);\r\n$veryDarkViolet: hsl(260, 8%, 14%);\r\n$white: #ffff;\r\n\r\n$fontSize: 18px; \r\n$fontSizeTwo: 11px;\r\n$fontSizeThree: 15px;\r\n$fontFamily: poppins; \r\n\r\n$desktopSidePadding: 0 3rem;\r\n$desktopHeaderPadding: 2rem 3rem;\r\n\r\n@mixin button {\r\n    background-color: $cyan;\r\n    border: none;\r\n    color: $white;\r\n    text-transform: capitalize;\r\n    font-size: $fontSizeThree;\r\n    font-family: $fontFamily;\r\n    font-weight: 500;\r\n    padding: 0.75rem 1.5rem;\r\n    border-radius: 2rem;\r\n    cursor: pointer;\r\n}\r\n\r\n@mixin flexOne {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -546,6 +528,136 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/assets/bg-boost-desktop.svg":
+/*!*****************************************!*\
+  !*** ./src/assets/bg-boost-desktop.svg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
+
+/***/ }),
+
+/***/ "./src/assets/bg-boost-mobile.svg":
+/*!****************************************!*\
+  !*** ./src/assets/bg-boost-mobile.svg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
+
+/***/ }),
+
+/***/ "./src/assets/bg-shorten-desktop.svg":
+/*!*******************************************!*\
+  !*** ./src/assets/bg-shorten-desktop.svg ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
+
+/***/ }),
+
+/***/ "./src/assets/bg-shorten-mobile.svg":
+/*!******************************************!*\
+  !*** ./src/assets/bg-shorten-mobile.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon-brand-recognition.svg":
+/*!***********************************************!*\
+  !*** ./src/assets/icon-brand-recognition.svg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon-detailed-records.svg":
+/*!**********************************************!*\
+  !*** ./src/assets/icon-detailed-records.svg ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon-detailed-records.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon-facebook.svg":
+/*!**************************************!*\
+  !*** ./src/assets/icon-facebook.svg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon-facebook.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon-fully-customizable.svg":
+/*!************************************************!*\
+  !*** ./src/assets/icon-fully-customizable.svg ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon-instagram.svg":
+/*!***************************************!*\
+  !*** ./src/assets/icon-instagram.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon-instagram.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon-pinterest.svg":
+/*!***************************************!*\
+  !*** ./src/assets/icon-pinterest.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon-pinterest.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon-twitter.svg":
+/*!*************************************!*\
+  !*** ./src/assets/icon-twitter.svg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon-twitter.svg";
+
+/***/ }),
+
+/***/ "./src/assets/illustration-working.svg":
+/*!*********************************************!*\
+  !*** ./src/assets/illustration-working.svg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "illustration-working.svg";
+
+/***/ }),
+
+/***/ "./src/assets/logo.svg":
+/*!*****************************!*\
+  !*** ./src/assets/logo.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "logo.svg";
+
 /***/ })
 
 /******/ 	});
@@ -599,6 +711,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -615,6 +739,26 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -628,12 +772,54 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ "./src/api.js");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
+/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
+/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
+/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
+/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
+/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
+/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
+/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
+/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
+/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
+/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
+/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
+/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
 
 
+
+
+
+
+var brandRecognitionSrc = document.querySelector('.iconOne');
+brandRecognitionSrc.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__;
+
+var detailedRecordsSrc = document.querySelector('.iconTwo');
+detailedRecordsSrc.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__;
+
+var fullyCustomizableSrc = document.querySelector('.iconThree');
+fullyCustomizableSrc.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__;
+
+var facebookSrc = document.querySelector('.facebook');
+facebookSrc.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__;
+
+var instagramSrc = document.querySelector('.instagram');
+instagramSrc.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__;
+
+var pinterestSrc = document.querySelector('.pinterest');
+pinterestSrc.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__;
+
+var twitterSrc = document.querySelector('.twitter');
+twitterSrc.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__;
+
+var illustrationSrc = document.querySelector('.illustration');
+illustrationSrc.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__;
+
+var logoSrc = document.querySelector('.logo');
+logoSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_13__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.2dedf348d8ae058b571d.js.map
+//# sourceMappingURL=bundle2d481ae3e0c46abc9941.js.map
