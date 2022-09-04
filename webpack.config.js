@@ -29,7 +29,7 @@ module.exports = {
         rules: [
             {
                 test:/\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
                 test:/\.js$/,
@@ -44,10 +44,6 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|pdf|gif)$/i,
                 type: 'asset/resource',
-            },
-            {
-                test: /\.html$/,
-                use: ["html-loader"],
             },
         ],
     },
