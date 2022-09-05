@@ -4,6 +4,7 @@ body {
     font-family: $fontFamily;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -48,6 +49,49 @@ header {
 
         button.signUp {
             @include button
+        }
+    }
+}
+
+main {
+    padding: $desktopSidePadding;
+
+    section.one {
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .contentsContainer {
+            width: 35rem;
+
+            h1 {
+                @include primaryHeading;
+            }
+
+            p {
+                @include paragraph;
+            }
+
+            button.getStarted {
+                @include button;
+                margin: 2rem 0 0 0;
+            }
+        }
+
+        img.illustration {
+            position: absolute;
+            top:10rem;
+            left: 60vw;
+        }
+    
+    }
+
+    section.two {
+        @include flexOne;
+
+        .inputContainer {
+            @include inputBackdrop;
         }
     }
 }

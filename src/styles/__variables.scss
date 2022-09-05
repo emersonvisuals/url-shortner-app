@@ -10,10 +10,11 @@ $white: #ffff;
 $fontSize: 18px; 
 $fontSizeTwo: 11px;
 $fontSizeThree: 15px;
+$fontSizePrimaryHeading: 75px;
 $fontFamily: poppins; 
 
-$desktopSidePadding: 0 3rem;
-$desktopHeaderPadding: 2rem 3rem;
+$desktopSidePadding: 0 8rem;
+$desktopHeaderPadding: 2rem 8rem;
 
 @mixin button {
     background-color: $cyan;
@@ -32,6 +33,33 @@ $desktopHeaderPadding: 2rem 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin primaryHeading {
+    font-family: $fontFamily;
+    font-size: $fontSizePrimaryHeading;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin paragraph {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: 500;
+    color: $grayishViolet;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+@mixin inputBackdrop {
+    @include flexOne;
+    background-image: url('/dist/bg-shorten-desktop.svg');
+    width: 100%;
+    padding: 3rem 0;
+    border-radius: 0.5rem;
 }
 
 
