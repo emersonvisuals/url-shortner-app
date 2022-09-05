@@ -30,8 +30,7 @@ header {
                 }
 
                 a:hover {
-                    transition: 0.25s all;
-                    color: $darkViolet
+                    @include hover;
                 }
             }
         }
@@ -47,6 +46,10 @@ header {
             padding: 0 2rem;
         }
 
+        button.login:hover {
+            @include hover;
+        }
+
         button.signUp {
             @include button
         }
@@ -57,7 +60,7 @@ main {
     padding: $desktopSidePadding;
 
     section.one {
-        height: 75vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -89,9 +92,54 @@ main {
 
     section.two {
         @include flexOne;
+        flex-direction: column;
 
         .inputContainer {
             @include inputBackdrop;
+
+            .inputContents {
+                display: grid;
+                grid-template-columns: 80% 20%;
+                grid-template-rows: 1fr;
+                margin: 2rem;
+                width: 100%;
+
+                input.textBox {
+                    @include inputTextbox;
+                }
+    
+                button.shortenIt {
+                    @include buttonTwo;
+                }
+            }
+        }
+
+        .inputResultContainer {
+            width: 100%;
+
+            ul.inputUl {
+                @include inputWrapper;
+
+                li.inputLi {
+                    @include flexOne;
+                    justify-content: space-between;
+                    text-decoration: none;
+                    list-style: none;
+
+                    .inputContents {
+                        @include flexOne;
+
+                        .result {
+                            color: $cyan;
+                        }
+
+                        button.btnResult {
+                            @include buttonTwo;
+                            margin: 0 0 0 1rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
