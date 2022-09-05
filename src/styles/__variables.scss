@@ -34,6 +34,13 @@ $desktopHeaderPadding: 2rem 8rem;
     border-radius: 0.5rem;
 }
 
+@mixin buttonThree {
+    @include button;
+    background-color: $veryDarkBlue;
+    color: $white;
+    border-radius: 0.5rem;
+}
+
 @mixin flexOne {
     display: flex;
     align-items: center;

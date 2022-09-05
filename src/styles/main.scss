@@ -137,6 +137,10 @@ main {
                             @include buttonTwo;
                             margin: 0 0 0 1rem;
                         }
+
+                        button.btnResult.active {
+                            @include buttonThree;
+                        }
                     }
                 }
             }

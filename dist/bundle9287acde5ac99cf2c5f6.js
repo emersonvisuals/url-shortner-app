@@ -1,6 +1,22 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/buttons.js":
+/*!************************!*\
+  !*** ./src/buttons.js ***!
+  \************************/
+/***/ (() => {
+
+var copyBtn = document.querySelectorAll('.btnResult');
+copyBtn.forEach(function (item) {
+  item.addEventListener('click', function () {
+    console.log('clicked');
+    item.innerHTML = 'Clicked!';
+    item.classList.add('active');
+  });
+});
+
+/***/ }),
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
@@ -8,6 +24,7 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -26,7 +43,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: poppins;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n}\n\nheader {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 2rem 8rem;\n}\nheader .boxOne {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nheader .boxOne ul.list {\n  display: flex;\n}\nheader .boxOne ul.list li {\n  padding: 0 1rem;\n  list-style: none;\n}\nheader .boxOne ul.list li a {\n  text-decoration: none;\n  color: hsl(257deg, 7%, 63%);\n  text-transform: capitalize;\n}\nheader .boxOne ul.list li a:hover {\n  transition: 0.25s all;\n  color: hsl(257deg, 27%, 26%);\n}\nheader .boxTwo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nheader .boxTwo button.login {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  background-color: transparent;\n  color: hsl(257deg, 7%, 63%);\n  padding: 0 2rem;\n}\nheader .boxTwo button.login:hover {\n  transition: 0.25s all;\n  color: hsl(257deg, 27%, 26%);\n}\nheader .boxTwo button.signUp {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n}\n\nmain {\n  padding: 0 8rem;\n}\nmain section.one {\n  height: 80vh;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\nmain section.one .contentsContainer {\n  width: 35rem;\n}\nmain section.one .contentsContainer h1 {\n  font-family: poppins;\n  font-size: 75px;\n  font-weight: 700;\n  line-height: 1.2;\n  margin: 0;\n  padding: 0;\n}\nmain section.one .contentsContainer p {\n  font-family: poppins;\n  font-size: 18px;\n  font-weight: 500;\n  color: hsl(257deg, 7%, 63%);\n  margin: 0;\n  padding: 0;\n  z-index: -1;\n}\nmain section.one .contentsContainer button.getStarted {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  margin: 2rem 0 0 0;\n}\nmain section.one img.illustration {\n  position: absolute;\n  top: 10rem;\n  left: 60vw;\n}\nmain section.two {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n}\nmain section.two .inputContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: hsl(257deg, 27%, 26%);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  width: 100%;\n  padding: 2rem 0;\n  border-radius: 0.5rem;\n}\nmain section.two .inputContainer .inputContents {\n  display: grid;\n  grid-template-columns: 80% 20%;\n  grid-template-rows: 1fr;\n  margin: 2rem;\n  width: 100%;\n}\nmain section.two .inputContainer .inputContents input.textBox {\n  padding: 0.75rem 0 0.75rem 1rem;\n  font-family: poppins;\n  font-size: 15px;\n  border-radius: 0.5rem;\n  margin: 0 1rem 0 0;\n}\nmain section.two .inputContainer .inputContents button.shortenIt {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  border-radius: 0.5rem;\n}\nmain section.two .inputResultContainer {\n  width: 100%;\n}\nmain section.two .inputResultContainer ul.inputUl {\n  text-decoration: none;\n  list-style: none;\n  background-color: white;\n  -webkit-box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.05);\n  box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.05);\n  padding: 1rem;\n  border-radius: 0.75rem;\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  justify-content: space-between;\n  text-decoration: none;\n  list-style: none;\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi .inputContents {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi .inputContents .result {\n  color: hsl(180deg, 66%, 49%);\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi .inputContents button.btnResult {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  border-radius: 0.5rem;\n  margin: 0 0 0 1rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/__variables.scss"],"names":[],"mappings":"AAEA;EACI,oBCUS;EDTT,SAAA;EACA,UAAA;EACA,kBAAA;AADJ;;AAIA;EACI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,kBCGmB;ADJvB;AAGI;ECsBA,aAAA;EACA,mBAAA;EACA,uBAAA;ADtBJ;AACQ;EACI,aAAA;AACZ;AACY;EACI,eAAA;EACA,gBAAA;AAChB;AACgB;EACI,qBAAA;EACA,2BCvBJ;EDwBI,0BAAA;AACpB;AAEgB;ECiDZ,qBAAA;EACA,4BAhFS;ADgCb;AAKI;ECDA,aAAA;EACA,mBAAA;EACA,uBAAA;ADDJ;AAGQ;ECtBJ,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EDeQ,6BAAA;EACA,2BCxCI;EDyCJ,eAAA;AAQZ;AALQ;ECgCJ,qBAAA;EACA,4BAhFS;ADwDb;AALQ;ECjCJ,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;ADyCJ;;AAXA;EACI,eC5CiB;AD0DrB;AAZI;EACI,YAAA;EACA,aAAA;EACA,mBAAA;EACA,2BAAA;AAcR;AAZQ;EACI,YAAA;AAcZ;AAZY;EC3BR,oBA9BS;EA+BT,eAhCqB;EAiCrB,gBAAA;EACA,gBAAA;EACA,SAAA;EACA,UAAA;AD0CJ;AAhBY;ECtBR,oBAvCS;EAwCT,eA5CO;EA6CP,gBAAA;EACA,2BAnDY;EAoDZ,SAAA;EACA,UAAA;EACA,WAAA;ADyCJ;AArBY;EC3DR,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EDoDY,kBAAA;AAgChB;AA5BQ;EACI,kBAAA;EACA,UAAA;EACA,UAAA;AA8BZ;AAzBI;ECvDA,aAAA;EACA,mBAAA;EACA,uBAAA;EDuDI,sBAAA;AA6BR;AA3BQ;EC3DJ,aAAA;EACA,mBAAA;EACA,uBAAA;EAwBA,uCA9DS;EA+DT,yDAAA;EACA,sBAAA;EACA,WAAA;EACA,eAAA;EACA,qBAAA;ADkEJ;AAnCY;EACI,aAAA;EACA,8BAAA;EACA,uBAAA;EACA,YAAA;EACA,WAAA;AAqChB;AAnCgB;EClCZ,+BAAA;EACA,oBA5DS;EA6DT,eA/DY;EAgEZ,qBAAA;EACA,kBAAA;ADwEJ;AAtCgB;EC3FZ,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EAKA,qBAAA;ADgIJ;AA7CQ;EACI,WAAA;AA+CZ;AA7CY;EC7BR,qBAAA;EACA,gBAAA;EACA,uBArFI;EA8EJ,uDAAA;EACA,+CAAA;EAQA,aAAA;EACA,sBAAA;AD8EJ;AAnDgB;ECrFZ,aAAA;EACA,mBAAA;EACA,uBAAA;EDqFgB,8BAAA;EACA,qBAAA;EACA,gBAAA;AAuDpB;AArDoB;EC3FhB,aAAA;EACA,mBAAA;EACA,uBAAA;ADmJJ;AAvDwB;EACI,4BCpIrB;AD6LP;AAtDwB;ECpHpB,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EAKA,qBAAA;EDwGwB,kBAAA;AAkE5B","sourcesContent":["@import \"./_variables\";\r\n\r\nbody {\r\n    font-family: $fontFamily;\r\n    margin: 0;\r\n    padding: 0;\r\n    overflow-x: hidden;\r\n}\r\n\r\nheader {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    padding: $desktopHeaderPadding;\r\n\r\n    .boxOne {\r\n        @include flexOne;\r\n\r\n        ul.list {\r\n            display: flex;\r\n\r\n            li {\r\n                padding: 0 1rem;\r\n                list-style: none;\r\n\r\n                a {\r\n                    text-decoration: none;\r\n                    color: $grayishViolet;\r\n                    text-transform: capitalize;\r\n                }\r\n\r\n                a:hover {\r\n                    @include hover;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    .boxTwo {\r\n        @include flexOne;\r\n\r\n        button.login {\r\n            @include button;\r\n            background-color: transparent;\r\n            color: $grayishViolet;\r\n            padding: 0 2rem;\r\n        }\r\n\r\n        button.login:hover {\r\n            @include hover;\r\n        }\r\n\r\n        button.signUp {\r\n            @include button\r\n        }\r\n    }\r\n}\r\n\r\nmain {\r\n    padding: $desktopSidePadding;\r\n\r\n    section.one {\r\n        height: 80vh;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: flex-start;\r\n\r\n        .contentsContainer {\r\n            width: 35rem;\r\n\r\n            h1 {\r\n                @include primaryHeading;\r\n            }\r\n\r\n            p {\r\n                @include paragraph;\r\n            }\r\n\r\n            button.getStarted {\r\n                @include button;\r\n                margin: 2rem 0 0 0;\r\n            }\r\n        }\r\n\r\n        img.illustration {\r\n            position: absolute;\r\n            top:10rem;\r\n            left: 60vw;\r\n        }\r\n    \r\n    }\r\n\r\n    section.two {\r\n        @include flexOne;\r\n        flex-direction: column;\r\n\r\n        .inputContainer {\r\n            @include inputBackdrop;\r\n\r\n            .inputContents {\r\n                display: grid;\r\n                grid-template-columns: 80% 20%;\r\n                grid-template-rows: 1fr;\r\n                margin: 2rem;\r\n                width: 100%;\r\n\r\n                input.textBox {\r\n                    @include inputTextbox;\r\n                }\r\n    \r\n                button.shortenIt {\r\n                    @include buttonTwo;\r\n                }\r\n            }\r\n        }\r\n\r\n        .inputResultContainer {\r\n            width: 100%;\r\n\r\n            ul.inputUl {\r\n                @include inputWrapper;\r\n\r\n                li.inputLi {\r\n                    @include flexOne;\r\n                    justify-content: space-between;\r\n                    text-decoration: none;\r\n                    list-style: none;\r\n\r\n                    .inputContents {\r\n                        @include flexOne;\r\n\r\n                        .result {\r\n                            color: $cyan;\r\n                        }\r\n\r\n                        button.btnResult {\r\n                            @include buttonTwo;\r\n                            margin: 0 0 0 1rem;\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}","$cyan: hsl(180, 66%, 49%);\r\n$darkViolet: hsl(257, 27%, 26%);\r\n$red: hsl(0, 87%, 67%);\r\n$gray: hsl(0, 0%, 75%);\r\n$grayishViolet: hsl(257, 7%, 63%);\r\n$veryDarkBlue: hsl(255, 11%, 22%);\r\n$veryDarkViolet: hsl(260, 8%, 14%);\r\n$white: #ffff;\r\n\r\n$fontSize: 18px; \r\n$fontSizeTwo: 11px;\r\n$fontSizeThree: 15px;\r\n$fontSizePrimaryHeading: 75px;\r\n$fontFamily: poppins; \r\n\r\n$desktopSidePadding: 0 8rem;\r\n$desktopHeaderPadding: 2rem 8rem;\r\n\r\n@mixin button {\r\n    background-color: $cyan;\r\n    border: none;\r\n    color: $white;\r\n    text-transform: capitalize;\r\n    font-size: $fontSizeThree;\r\n    font-family: $fontFamily;\r\n    font-weight: 500;\r\n    padding: 0.75rem 1.5rem;\r\n    border-radius: 2rem;\r\n    cursor: pointer;\r\n}\r\n\r\n@mixin buttonTwo {\r\n    @include button;\r\n    border-radius: 0.5rem;\r\n}\r\n\r\n@mixin flexOne {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n@mixin primaryHeading {\r\n    font-family: $fontFamily;\r\n    font-size: $fontSizePrimaryHeading;\r\n    font-weight: 700;\r\n    line-height: 1.2;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n@mixin paragraph {\r\n    font-family: $fontFamily;\r\n    font-size: $fontSize;\r\n    font-weight: 500;\r\n    color: $grayishViolet;\r\n    margin: 0;\r\n    padding: 0;\r\n    z-index: -1;\r\n}\r\n\r\n@mixin inputBackdrop {\r\n    @include flexOne;\r\n    background-color: $darkViolet;\r\n    background-image: url('/dist/bg-boost-desktop.svg');\r\n    background-size: cover;\r\n    width: 100%;\r\n    padding: 2rem 0;\r\n    border-radius: 0.5rem;\r\n}\r\n\r\n@mixin inputTextbox {\r\n    padding: 0.75rem 0 0.75rem 1rem;\r\n    font-family: $fontFamily;\r\n    font-size: $fontSizeThree;\r\n    border-radius: 0.5rem;\r\n    margin: 0 1rem 0 0;\r\n}\r\n\r\n@mixin hover {\r\n    transition: 0.25s all;\r\n    color: $darkViolet\r\n}\r\n\r\n@mixin boxShadow {\r\n    -webkit-box-shadow: 0px 3px 5px 5px rgba(0,0,0,0.05); \r\n    box-shadow: 0px 3px 5px 5px rgba(0,0,0,0.05);\r\n}\r\n\r\n@mixin inputWrapper {\r\n    text-decoration: none;\r\n    list-style: none;\r\n    background-color: $white;\r\n    @include  boxShadow;\r\n    padding: 1rem;\r\n    border-radius: 0.75rem;\r\n\r\n}\r\n\r\n\r\n\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: poppins;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n}\n\nheader {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 2rem 8rem;\n}\nheader .boxOne {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nheader .boxOne ul.list {\n  display: flex;\n}\nheader .boxOne ul.list li {\n  padding: 0 1rem;\n  list-style: none;\n}\nheader .boxOne ul.list li a {\n  text-decoration: none;\n  color: hsl(257deg, 7%, 63%);\n  text-transform: capitalize;\n}\nheader .boxOne ul.list li a:hover {\n  transition: 0.25s all;\n  color: hsl(257deg, 27%, 26%);\n}\nheader .boxTwo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nheader .boxTwo button.login {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  background-color: transparent;\n  color: hsl(257deg, 7%, 63%);\n  padding: 0 2rem;\n}\nheader .boxTwo button.login:hover {\n  transition: 0.25s all;\n  color: hsl(257deg, 27%, 26%);\n}\nheader .boxTwo button.signUp {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n}\n\nmain {\n  padding: 0 8rem;\n}\nmain section.one {\n  height: 80vh;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\nmain section.one .contentsContainer {\n  width: 35rem;\n}\nmain section.one .contentsContainer h1 {\n  font-family: poppins;\n  font-size: 75px;\n  font-weight: 700;\n  line-height: 1.2;\n  margin: 0;\n  padding: 0;\n}\nmain section.one .contentsContainer p {\n  font-family: poppins;\n  font-size: 18px;\n  font-weight: 500;\n  color: hsl(257deg, 7%, 63%);\n  margin: 0;\n  padding: 0;\n  z-index: -1;\n}\nmain section.one .contentsContainer button.getStarted {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  margin: 2rem 0 0 0;\n}\nmain section.one img.illustration {\n  position: absolute;\n  top: 10rem;\n  left: 60vw;\n}\nmain section.two {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n}\nmain section.two .inputContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: hsl(257deg, 27%, 26%);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  width: 100%;\n  padding: 2rem 0;\n  border-radius: 0.5rem;\n}\nmain section.two .inputContainer .inputContents {\n  display: grid;\n  grid-template-columns: 80% 20%;\n  grid-template-rows: 1fr;\n  margin: 2rem;\n  width: 100%;\n}\nmain section.two .inputContainer .inputContents input.textBox {\n  padding: 0.75rem 0 0.75rem 1rem;\n  font-family: poppins;\n  font-size: 15px;\n  border-radius: 0.5rem;\n  margin: 0 1rem 0 0;\n}\nmain section.two .inputContainer .inputContents button.shortenIt {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  border-radius: 0.5rem;\n}\nmain section.two .inputResultContainer {\n  width: 100%;\n}\nmain section.two .inputResultContainer ul.inputUl {\n  text-decoration: none;\n  list-style: none;\n  background-color: white;\n  -webkit-box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.05);\n  box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.05);\n  padding: 1rem;\n  border-radius: 0.75rem;\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  justify-content: space-between;\n  text-decoration: none;\n  list-style: none;\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi .inputContents {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi .inputContents .result {\n  color: hsl(180deg, 66%, 49%);\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi .inputContents button.btnResult {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  border-radius: 0.5rem;\n  margin: 0 0 0 1rem;\n}\nmain section.two .inputResultContainer ul.inputUl li.inputLi .inputContents button.btnResult.active {\n  background-color: hsl(180deg, 66%, 49%);\n  border: none;\n  color: white;\n  text-transform: capitalize;\n  font-size: 15px;\n  font-family: poppins;\n  font-weight: 500;\n  padding: 0.75rem 1.5rem;\n  border-radius: 2rem;\n  cursor: pointer;\n  background-color: hsl(255deg, 11%, 22%);\n  color: white;\n  border-radius: 0.5rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/__variables.scss"],"names":[],"mappings":"AAEA;EACI,oBCUS;EDTT,SAAA;EACA,UAAA;EACA,kBAAA;AADJ;;AAIA;EACI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,kBCGmB;ADJvB;AAGI;EC6BA,aAAA;EACA,mBAAA;EACA,uBAAA;AD7BJ;AACQ;EACI,aAAA;AACZ;AACY;EACI,eAAA;EACA,gBAAA;AAChB;AACgB;EACI,qBAAA;EACA,2BCvBJ;EDwBI,0BAAA;AACpB;AAEgB;ECwDZ,qBAAA;EACA,4BAvFS;ADgCb;AAKI;ECMA,aAAA;EACA,mBAAA;EACA,uBAAA;ADRJ;AAGQ;ECtBJ,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EDeQ,6BAAA;EACA,2BCxCI;EDyCJ,eAAA;AAQZ;AALQ;ECuCJ,qBAAA;EACA,4BAvFS;ADwDb;AALQ;ECjCJ,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;ADyCJ;;AAXA;EACI,eC5CiB;AD0DrB;AAZI;EACI,YAAA;EACA,aAAA;EACA,mBAAA;EACA,2BAAA;AAcR;AAZQ;EACI,YAAA;AAcZ;AAZY;ECpBR,oBArCS;EAsCT,eAvCqB;EAwCrB,gBAAA;EACA,gBAAA;EACA,SAAA;EACA,UAAA;ADmCJ;AAhBY;ECfR,oBA9CS;EA+CT,eAnDO;EAoDP,gBAAA;EACA,2BA1DY;EA2DZ,SAAA;EACA,UAAA;EACA,WAAA;ADkCJ;AArBY;EC3DR,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EDoDY,kBAAA;AAgChB;AA5BQ;EACI,kBAAA;EACA,UAAA;EACA,UAAA;AA8BZ;AAzBI;EChDA,aAAA;EACA,mBAAA;EACA,uBAAA;EDgDI,sBAAA;AA6BR;AA3BQ;ECpDJ,aAAA;EACA,mBAAA;EACA,uBAAA;EAwBA,uCArES;EAsET,yDAAA;EACA,sBAAA;EACA,WAAA;EACA,eAAA;EACA,qBAAA;AD2DJ;AAnCY;EACI,aAAA;EACA,8BAAA;EACA,uBAAA;EACA,YAAA;EACA,WAAA;AAqChB;AAnCgB;EC3BZ,+BAAA;EACA,oBAnES;EAoET,eAtEY;EAuEZ,qBAAA;EACA,kBAAA;ADiEJ;AAtCgB;EC3FZ,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EAKA,qBAAA;ADgIJ;AA7CQ;EACI,WAAA;AA+CZ;AA7CY;ECtBR,qBAAA;EACA,gBAAA;EACA,uBA5FI;EAqFJ,uDAAA;EACA,+CAAA;EAQA,aAAA;EACA,sBAAA;ADuEJ;AAnDgB;EC9EZ,aAAA;EACA,mBAAA;EACA,uBAAA;ED8EgB,8BAAA;EACA,qBAAA;EACA,gBAAA;AAuDpB;AArDoB;ECpFhB,aAAA;EACA,mBAAA;EACA,uBAAA;AD4IJ;AAvDwB;EACI,4BCpIrB;AD6LP;AAtDwB;ECpHpB,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EAKA,qBAAA;EDwGwB,kBAAA;AAkE5B;AA/DwB;ECzHpB,uCAnBG;EAoBH,YAAA;EACA,YAdI;EAeJ,0BAAA;EACA,eAZY;EAaZ,oBAXS;EAYT,gBAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EAUA,uCAjCW;EAkCX,YAhCI;EAiCJ,qBAAA;ADkLJ","sourcesContent":["@import \"./_variables\";\r\n\r\nbody {\r\n    font-family: $fontFamily;\r\n    margin: 0;\r\n    padding: 0;\r\n    overflow-x: hidden;\r\n}\r\n\r\nheader {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    padding: $desktopHeaderPadding;\r\n\r\n    .boxOne {\r\n        @include flexOne;\r\n\r\n        ul.list {\r\n            display: flex;\r\n\r\n            li {\r\n                padding: 0 1rem;\r\n                list-style: none;\r\n\r\n                a {\r\n                    text-decoration: none;\r\n                    color: $grayishViolet;\r\n                    text-transform: capitalize;\r\n                }\r\n\r\n                a:hover {\r\n                    @include hover;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    .boxTwo {\r\n        @include flexOne;\r\n\r\n        button.login {\r\n            @include button;\r\n            background-color: transparent;\r\n            color: $grayishViolet;\r\n            padding: 0 2rem;\r\n        }\r\n\r\n        button.login:hover {\r\n            @include hover;\r\n        }\r\n\r\n        button.signUp {\r\n            @include button\r\n        }\r\n    }\r\n}\r\n\r\nmain {\r\n    padding: $desktopSidePadding;\r\n\r\n    section.one {\r\n        height: 80vh;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: flex-start;\r\n\r\n        .contentsContainer {\r\n            width: 35rem;\r\n\r\n            h1 {\r\n                @include primaryHeading;\r\n            }\r\n\r\n            p {\r\n                @include paragraph;\r\n            }\r\n\r\n            button.getStarted {\r\n                @include button;\r\n                margin: 2rem 0 0 0;\r\n            }\r\n        }\r\n\r\n        img.illustration {\r\n            position: absolute;\r\n            top:10rem;\r\n            left: 60vw;\r\n        }\r\n    \r\n    }\r\n\r\n    section.two {\r\n        @include flexOne;\r\n        flex-direction: column;\r\n\r\n        .inputContainer {\r\n            @include inputBackdrop;\r\n\r\n            .inputContents {\r\n                display: grid;\r\n                grid-template-columns: 80% 20%;\r\n                grid-template-rows: 1fr;\r\n                margin: 2rem;\r\n                width: 100%;\r\n\r\n                input.textBox {\r\n                    @include inputTextbox;\r\n                }\r\n    \r\n                button.shortenIt {\r\n                    @include buttonTwo;\r\n                }\r\n            }\r\n        }\r\n\r\n        .inputResultContainer {\r\n            width: 100%;\r\n\r\n            ul.inputUl {\r\n                @include inputWrapper;\r\n\r\n                li.inputLi {\r\n                    @include flexOne;\r\n                    justify-content: space-between;\r\n                    text-decoration: none;\r\n                    list-style: none;\r\n\r\n                    .inputContents {\r\n                        @include flexOne;\r\n\r\n                        .result {\r\n                            color: $cyan;\r\n                        }\r\n\r\n                        button.btnResult {\r\n                            @include buttonTwo;\r\n                            margin: 0 0 0 1rem;\r\n                        }\r\n\r\n                        button.btnResult.active {\r\n                            @include buttonThree;\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}","$cyan: hsl(180, 66%, 49%);\r\n$darkViolet: hsl(257, 27%, 26%);\r\n$red: hsl(0, 87%, 67%);\r\n$gray: hsl(0, 0%, 75%);\r\n$grayishViolet: hsl(257, 7%, 63%);\r\n$veryDarkBlue: hsl(255, 11%, 22%);\r\n$veryDarkViolet: hsl(260, 8%, 14%);\r\n$white: #ffff;\r\n\r\n$fontSize: 18px; \r\n$fontSizeTwo: 11px;\r\n$fontSizeThree: 15px;\r\n$fontSizePrimaryHeading: 75px;\r\n$fontFamily: poppins; \r\n\r\n$desktopSidePadding: 0 8rem;\r\n$desktopHeaderPadding: 2rem 8rem;\r\n\r\n@mixin button {\r\n    background-color: $cyan;\r\n    border: none;\r\n    color: $white;\r\n    text-transform: capitalize;\r\n    font-size: $fontSizeThree;\r\n    font-family: $fontFamily;\r\n    font-weight: 500;\r\n    padding: 0.75rem 1.5rem;\r\n    border-radius: 2rem;\r\n    cursor: pointer;\r\n}\r\n\r\n@mixin buttonTwo {\r\n    @include button;\r\n    border-radius: 0.5rem;\r\n}\r\n\r\n@mixin buttonThree {\r\n    @include button;\r\n    background-color: $veryDarkBlue;\r\n    color: $white;\r\n    border-radius: 0.5rem;\r\n}\r\n\r\n@mixin flexOne {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n@mixin primaryHeading {\r\n    font-family: $fontFamily;\r\n    font-size: $fontSizePrimaryHeading;\r\n    font-weight: 700;\r\n    line-height: 1.2;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n@mixin paragraph {\r\n    font-family: $fontFamily;\r\n    font-size: $fontSize;\r\n    font-weight: 500;\r\n    color: $grayishViolet;\r\n    margin: 0;\r\n    padding: 0;\r\n    z-index: -1;\r\n}\r\n\r\n@mixin inputBackdrop {\r\n    @include flexOne;\r\n    background-color: $darkViolet;\r\n    background-image: url('/dist/bg-boost-desktop.svg');\r\n    background-size: cover;\r\n    width: 100%;\r\n    padding: 2rem 0;\r\n    border-radius: 0.5rem;\r\n}\r\n\r\n@mixin inputTextbox {\r\n    padding: 0.75rem 0 0.75rem 1rem;\r\n    font-family: $fontFamily;\r\n    font-size: $fontSizeThree;\r\n    border-radius: 0.5rem;\r\n    margin: 0 1rem 0 0;\r\n}\r\n\r\n@mixin hover {\r\n    transition: 0.25s all;\r\n    color: $darkViolet\r\n}\r\n\r\n@mixin boxShadow {\r\n    -webkit-box-shadow: 0px 3px 5px 5px rgba(0,0,0,0.05); \r\n    box-shadow: 0px 3px 5px 5px rgba(0,0,0,0.05);\r\n}\r\n\r\n@mixin inputWrapper {\r\n    text-decoration: none;\r\n    list-style: none;\r\n    background-color: $white;\r\n    @include  boxShadow;\r\n    padding: 1rem;\r\n    border-radius: 0.75rem;\r\n\r\n}\r\n\r\n\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39,6 +56,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: poppins;\n  mar
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -150,6 +168,7 @@ module.exports = function (cssWithMappingToString) {
   \********************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (url, options) {
@@ -188,6 +207,7 @@ module.exports = function (url, options) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -219,6 +239,7 @@ module.exports = function (item) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -273,6 +294,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -386,6 +408,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -434,6 +457,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -454,6 +478,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -475,6 +500,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -554,6 +580,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -579,6 +606,7 @@ module.exports = styleTagTransform;
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
 
 /***/ }),
@@ -589,6 +617,7 @@ module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
 
 /***/ }),
@@ -599,6 +628,7 @@ module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
   \****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
 
 /***/ }),
@@ -609,6 +639,7 @@ module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
 
 /***/ }),
@@ -619,6 +650,7 @@ module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
 
 /***/ }),
@@ -629,6 +661,7 @@ module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
   \***********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
 
 /***/ }),
@@ -639,6 +672,7 @@ module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-detailed-records.svg";
 
 /***/ }),
@@ -649,6 +683,7 @@ module.exports = __webpack_require__.p + "icon-detailed-records.svg";
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-facebook.svg";
 
 /***/ }),
@@ -659,6 +694,7 @@ module.exports = __webpack_require__.p + "icon-facebook.svg";
   \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
 
 /***/ }),
@@ -669,6 +705,7 @@ module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-instagram.svg";
 
 /***/ }),
@@ -679,6 +716,7 @@ module.exports = __webpack_require__.p + "icon-instagram.svg";
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-pinterest.svg";
 
 /***/ }),
@@ -689,6 +727,7 @@ module.exports = __webpack_require__.p + "icon-pinterest.svg";
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-twitter.svg";
 
 /***/ }),
@@ -699,6 +738,7 @@ module.exports = __webpack_require__.p + "icon-twitter.svg";
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "illustration-working.svg";
 
 /***/ }),
@@ -709,6 +749,7 @@ module.exports = __webpack_require__.p + "illustration-working.svg";
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "logo.svg";
 
 /***/ })
@@ -848,26 +889,30 @@ module.exports = __webpack_require__.p + "logo.svg";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
-/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
-/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
-/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
-/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
-/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
-/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
-/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
-/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
-/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
-/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
-/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
-/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
+/* harmony import */ var _buttons_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buttons.js */ "./src/buttons.js");
+/* harmony import */ var _buttons_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_buttons_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
+/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
+/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
+/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
+/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
+/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
+/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
+/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
+/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
+/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
+/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
+/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
+/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
+
 
 
 
@@ -875,33 +920,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var brandRecognitionSrc = document.querySelector('.iconOne');
-brandRecognitionSrc.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__;
+brandRecognitionSrc.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_6__;
 
 var detailedRecordsSrc = document.querySelector('.iconTwo');
-detailedRecordsSrc.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__;
+detailedRecordsSrc.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_7__;
 
 var fullyCustomizableSrc = document.querySelector('.iconThree');
-fullyCustomizableSrc.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__;
+fullyCustomizableSrc.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_8__;
 
 var facebookSrc = document.querySelector('.facebook');
-facebookSrc.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__;
+facebookSrc.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_9__;
 
 var instagramSrc = document.querySelector('.instagram');
-instagramSrc.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__;
+instagramSrc.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_10__;
 
 var pinterestSrc = document.querySelector('.pinterest');
-pinterestSrc.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__;
+pinterestSrc.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_11__;
 
 var twitterSrc = document.querySelector('.twitter');
-twitterSrc.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__;
+twitterSrc.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_12__;
 
 var illustrationSrc = document.querySelector('.illustration');
-illustrationSrc.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__;
+illustrationSrc.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_13__;
 
 var logoSrc = document.querySelector('.logo');
-logoSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_13__;
+logoSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle5a110f4e3cdace417422.js.map
+//# sourceMappingURL=bundle9287acde5ac99cf2c5f6.js.map
