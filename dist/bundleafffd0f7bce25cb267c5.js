@@ -8,45 +8,50 @@
 /***/ (() => {
 
 var shortenItBtn = document.querySelector('button.shortenIt');
-var inputResultWrapper = document.querySelector('.inputResultContainer'); // api request
-
-var value = 'frontendmentor.io';
-
-function fetchRequest() {
-  fetch("https://api.shrtco.de/v2/shorten?url=".concat(value)).then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    return console.log(data.result.short_link);
-  });
-}
-
-fetchRequest(); // defining structure for URl clicks
-
+var inputResultWrapper = document.querySelector('.inputResultContainer');
 shortenItBtn.addEventListener('click', function () {
-  var ul = inputResultWrapper.appendChild(document.createElement('ul'));
-  ul.classList.add('inputUl');
-  var li = ul.appendChild(document.createElement('li'));
-  li.classList.add('inputLi');
-  var pOne = li.appendChild(document.createElement('p'));
-  pOne.classList.add('inputValue');
-  pOne.innerText = 'https//www.frontendmentor.io';
-  var div = li.appendChild(document.createElement('div'));
-  div.classList.add('inputContents');
-  var result = div.appendChild(document.createElement('p'));
-  result.classList.add('result');
-  result.innerText = 'https://relink/k4lKyk';
-  var btnResult = div.appendChild(document.createElement('button'));
-  btnResult.classList.add('btnResult');
-  btnResult.innerText = 'copy'; // btn copied functionality 
+  // api request
+  var textInput = document.querySelector('input.textBox');
 
-  var copyAllBtns = document.querySelectorAll('.btnResult');
-  copyAllBtns.forEach(function (item) {
-    item.addEventListener('click', function () {
-      console.log('clicked');
-      item.innerHTML = 'Clicked!';
-      item.classList.add('active');
+  function fetchRequest() {
+    fetch("https://api.shrtco.de/v2/shorten?url=".concat(textInput.value)).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log(data.result.short_link); // defining structure for URl clicks
+
+      var ul = inputResultWrapper.appendChild(document.createElement('ul'));
+      ul.classList.add('inputUl');
+      var li = ul.appendChild(document.createElement('li'));
+      li.classList.add('inputLi');
+      var pOne = li.appendChild(document.createElement('p'));
+      pOne.classList.add('inputValue');
+      pOne.innerText = "".concat(textInput.value);
+      var div = li.appendChild(document.createElement('div'));
+      div.classList.add('inputContents');
+      var result = div.appendChild(document.createElement('p'));
+      result.classList.add('result');
+      result.innerText = "".concat(data.result.short_link);
+      var btnResult = div.appendChild(document.createElement('button'));
+      btnResult.classList.add('btnResult');
+      btnResult.innerText = 'copy'; // clicked btn style functionality 
+
+      var copyAllBtns = document.querySelectorAll('.btnResult');
+      var finalOutcome = "".concat(data.result.short_link);
+      copyAllBtns.forEach(function (item) {
+        item.addEventListener('click', function () {
+          console.log('clicked');
+          item.innerHTML = 'Clicked!';
+          item.classList.add('active');
+          navigator.clipboard.writeText(finalOutcome);
+        });
+      });
+    })["catch"](function (err) {
+      console.log(err);
+      console.log('not a link');
     });
-  });
+  }
+
+  fetchRequest();
 });
 
 /***/ }),
@@ -982,4 +987,4 @@ logoSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__;
 
 /******/ })()
 ;
-//# sourceMappingURL=bundleb33f4bf2a2815bfc0709.js.map
+//# sourceMappingURL=bundleafffd0f7bce25cb267c5.js.map
