@@ -41,10 +41,24 @@ shortenItBtn.addEventListener('click', () => {
                     navigator.clipboard.writeText(finalOutcome);
                 })
             });
+            textInput.value = '';
         })
         .catch(err => {
             console.log(err);
             console.log('not a link');
+            
+            const link = document.querySelector('input.textBox');
+            const errorMessage = document.querySelector('.warning')
+            const errorMessageP = document.querySelector('.warningMessage')
+            let linkPlaceholder = document.querySelector('input.textBox::placeholder')
+    
+            errorMessageP.innerHTML = 'Please enter a valid link';
+
+            link.classList.add('active')
+            errorMessage.classList.add('active')
+            linkPlaceholder.classList.add('active');
+
+            console.log(errorMessageP);
         });
     }
     fetchRequest();

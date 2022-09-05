@@ -107,10 +107,36 @@ main {
                 input.textBox {
                     @include inputTextbox;
                 }
+
+                input.textBox.active::placeholder {
+                    color: red;
+                }
+
+                input.textBox.active {
+                    @include inputTextboxActive;
+                }
     
                 button.shortenIt {
                     @include buttonTwo;
                 }
+
+                .warning {
+                    visibility: hidden;
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        transform: translateY(1rem);
+                        color: $red;
+                        text-transform: capitalize;
+                        font-style: italic;
+                    }
+                }
+
+                .warning.active {
+                    visibility: visible;
+                }
+
             }
         }
 
