@@ -8,7 +8,19 @@
 /***/ (() => {
 
 var shortenItBtn = document.querySelector('button.shortenIt');
-var inputResultWrapper = document.querySelector('.inputResultContainer'); // defining structure for URl clicks
+var inputResultWrapper = document.querySelector('.inputResultContainer'); // api request
+
+var value = 'frontendmentor.io';
+
+function fetchRequest() {
+  fetch("https://api.shrtco.de/v2/shorten?url=".concat(value)).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    return console.log(data.result.short_link);
+  });
+}
+
+fetchRequest(); // defining structure for URl clicks
 
 shortenItBtn.addEventListener('click', function () {
   var ul = inputResultWrapper.appendChild(document.createElement('ul'));
@@ -970,4 +982,4 @@ logoSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__;
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle323a9680e8af73cd80ca.js.map
+//# sourceMappingURL=bundleb33f4bf2a2815bfc0709.js.map

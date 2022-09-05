@@ -1,6 +1,15 @@
 const shortenItBtn = document.querySelector('button.shortenIt');
 const inputResultWrapper = document.querySelector('.inputResultContainer');
 
+// api request
+let value = 'frontendmentor.io'
+function fetchRequest() {
+    fetch(`https://api.shrtco.de/v2/shorten?url=${value}`)
+    .then(response => response.json())
+    .then(data => console.log(data.result.short_link))
+}
+fetchRequest();
+
 // defining structure for URl clicks
 shortenItBtn.addEventListener('click', () => {
     const ul = inputResultWrapper.appendChild(document.createElement('ul'));
