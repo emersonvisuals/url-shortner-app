@@ -1,18 +1,39 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/buttons.js":
-/*!************************!*\
-  !*** ./src/buttons.js ***!
-  \************************/
+/***/ "./src/input.js":
+/*!**********************!*\
+  !*** ./src/input.js ***!
+  \**********************/
 /***/ (() => {
 
-var copyBtn = document.querySelectorAll('.btnResult');
-copyBtn.forEach(function (item) {
-  item.addEventListener('click', function () {
-    console.log('clicked');
-    item.innerHTML = 'Clicked!';
-    item.classList.add('active');
+var shortenItBtn = document.querySelector('button.shortenIt');
+var inputResultWrapper = document.querySelector('.inputResultContainer'); // defining structure for URl clicks
+
+shortenItBtn.addEventListener('click', function () {
+  var ul = inputResultWrapper.appendChild(document.createElement('ul'));
+  ul.classList.add('inputUl');
+  var li = ul.appendChild(document.createElement('li'));
+  li.classList.add('inputLi');
+  var pOne = li.appendChild(document.createElement('p'));
+  pOne.classList.add('inputValue');
+  pOne.innerText = 'https//www.frontendmentor.io';
+  var div = li.appendChild(document.createElement('div'));
+  div.classList.add('inputContents');
+  var result = div.appendChild(document.createElement('p'));
+  result.classList.add('result');
+  result.innerText = 'https://relink/k4lKyk';
+  var btnResult = div.appendChild(document.createElement('button'));
+  btnResult.classList.add('btnResult');
+  btnResult.innerText = 'copy'; // btn copied functionality 
+
+  var copyAllBtns = document.querySelectorAll('.btnResult');
+  copyAllBtns.forEach(function (item) {
+    item.addEventListener('click', function () {
+      console.log('clicked');
+      item.innerHTML = 'Clicked!';
+      item.classList.add('active');
+    });
   });
 });
 
@@ -897,8 +918,8 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _buttons_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buttons.js */ "./src/buttons.js");
-/* harmony import */ var _buttons_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_buttons_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _input_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input.js */ "./src/input.js");
+/* harmony import */ var _input_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_input_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
 /* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
 /* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
@@ -949,4 +970,4 @@ logoSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__;
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle9287acde5ac99cf2c5f6.js.map
+//# sourceMappingURL=bundle323a9680e8af73cd80ca.js.map

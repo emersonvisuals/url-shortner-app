@@ -1,6 +1,6 @@
 import './styles/main.scss';
 
-import './buttons.js';
+import './input.js';
 
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'
