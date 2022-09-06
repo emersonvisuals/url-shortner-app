@@ -8,6 +8,7 @@ body {
 }
 
 header {
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,16 +58,17 @@ header {
 }
 
 main {
-    padding: $desktopSidePadding;
 
     section.one {
         height: 80vh;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        padding: $desktopHeaderPadding;
 
         .contentsContainer {
             width: 35rem;
+            transform: translateY(-5rem);
 
             h1 {
                 @include primaryHeading;
@@ -93,9 +95,12 @@ main {
     section.two {
         @include flexOne;
         flex-direction: column;
+        background-color: $veryGray;
+        padding: $desktopHeaderPadding;
 
         .inputContainer {
             @include inputBackdrop;
+            transform: translateY(-7rem);
 
             .inputContents {
                 display: grid;
@@ -142,6 +147,7 @@ main {
 
         .inputResultContainer {
             width: 100%;
+            transform: translateY(-7rem);
 
             ul.inputUl {
                 @include inputWrapper;
@@ -170,6 +176,124 @@ main {
                     }
                 }
             }
+        }
+    }
+
+    section.three {
+        @include flexOne;
+        flex-direction: column;
+        padding: 8rem;
+        background-color: $veryGray;
+        height: 75vh;
+
+        .subheading {
+            @include flexOne;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            width: 30rem;
+            margin: 0 0 15rem 0;
+
+            h2 {
+                @include secondaryHeading;
+                margin: 0 0 2rem 0;
+            }
+
+            p {
+                @include paragraphTwo;
+                font-weight: 500;
+            }
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 2%;
+            position: relative;
+            z-index: 1;
+            margin: 0 0 10rem 0;
+
+            .brandRecognition {
+                @include parentDiv;
+                transform: translateY(-9rem);
+
+                .iconOneBackCircle {
+                    @include iconBackground;
+                }
+
+                h3 {
+                    @include iconHeader;
+                }
+
+                p {
+                    @include iconParagraph;
+                }
+            }
+
+            .detailedRecords {
+                @include parentDiv;
+                transform: translateY(-6rem);
+
+                .iconTwoBackCircle {
+                    @include iconBackground;
+                }
+
+                h3 {
+                    @include iconHeader;
+                }
+
+                p {
+                    @include iconParagraph;
+                }
+            }
+            
+            .fullyCustomizable {
+                @include parentDiv;
+                transform: translateY(-3rem);
+
+                .iconThreeBackCircle {
+                    @include iconBackground;
+                }
+
+                h3 {
+                    @include iconHeader;
+                }
+
+                p {
+                    @include iconParagraph;
+                }
+            }
+        }
+    }
+
+    section.three::after {
+        content: '';
+        position: absolute;
+        width: calc(100vw - 16rem);
+        height: 10px;
+        background-color: $cyan;
+        z-index: 0;
+    }
+
+    section.four {
+        @include flexOne;
+        flex-direction: column;
+        width: 100vw;
+        height: 15rem;
+        background-image: url('/src/assets/bg-boost-desktop.svg');
+        background-color: $darkViolet;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h2 {
+            @include secondaryHeading;
+            color: $white;
+            margin: 0 0 2rem 0;
+        }
+
+        button.getStarted {
+            @include button;
         }
     }
 }

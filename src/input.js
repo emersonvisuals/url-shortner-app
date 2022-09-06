@@ -44,24 +44,22 @@ shortenItBtn.addEventListener('click', () => {
             textInput.value = '';
         })
         .catch(err => {
+            textInput.value = '';
             console.log(err);
-            console.log('not a link');
+            console.error('failed to log link');
             
             const link = document.querySelector('input.textBox');
             const errorMessage = document.querySelector('.warning')
             const errorMessageP = document.querySelector('.warningMessage')
-            let linkPlaceholder = document.querySelector('input.textBox::placeholder')
+            const linkPlaceholder = document.querySelector('input.textBox::placeholder')
     
             errorMessageP.innerHTML = 'Please enter a valid link';
 
             link.classList.add('active')
             errorMessage.classList.add('active')
             linkPlaceholder.classList.add('active');
-
-            console.log(errorMessageP);
         });
     }
     fetchRequest();
-
 
 })

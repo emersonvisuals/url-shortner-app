@@ -3,6 +3,7 @@ const errorMessage = document.querySelector('.warning')
 const btn = document.querySelector('button.shortenIt');
 
 btn.addEventListener('click', () => {
+    console.log('test')
     let linkPlaceholder = document.querySelector('input.textBox::placeholder')
 
     if (link.value === '') {

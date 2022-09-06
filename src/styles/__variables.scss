@@ -2,6 +2,7 @@ $cyan: hsl(180, 66%, 49%);
 $darkViolet: hsl(257, 27%, 26%);
 $red: hsl(0, 87%, 67%);
 $gray: hsl(0, 0%, 75%);
+$veryGray: #eff1f7;
 $grayishViolet: hsl(257, 7%, 63%);
 $veryDarkBlue: hsl(255, 11%, 22%);
 $veryDarkViolet: hsl(260, 8%, 14%);
@@ -11,6 +12,8 @@ $fontSize: 18px;
 $fontSizeTwo: 11px;
 $fontSizeThree: 15px;
 $fontSizePrimaryHeading: 75px;
+$fontSizeSecondaryHeading: 40px;
+$fontSizeThirdHeading: 25px;
 $fontFamily: poppins; 
 
 $desktopSidePadding: 0 8rem;
@@ -56,6 +59,20 @@ $desktopHeaderPadding: 2rem 8rem;
     padding: 0;
 }
 
+@mixin secondaryHeading {
+    @include primaryHeading;
+    text-transform: capitalize;
+    font-size: $fontSizeSecondaryHeading;
+    color: $darkViolet;
+}
+
+@mixin thirdHeading {
+    @include primaryHeading;
+    text-transform: capitalize;
+    font-size: $fontSizeThirdHeading;
+    color: $darkViolet;
+}
+
 @mixin paragraph {
     font-family: $fontFamily;
     font-size: $fontSize;
@@ -65,6 +82,26 @@ $desktopHeaderPadding: 2rem 8rem;
     padding: 0;
     z-index: -1;
 }
+
+@mixin paragraphTwo {
+    font-family: $fontFamily;
+    font-size: $fontSizeThree;
+    font-weight: 500;
+    color: $gray;
+    margin: 0;
+    padding: 0;
+}
+
+
+@mixin paragraphThree {
+    font-family: $fontFamily;
+    font-size: $fontSizeThree;
+    font-weight: 500;
+    color: $gray;
+    margin: 0;
+    padding: 0;
+}
+
 
 @mixin inputBackdrop {
     @include flexOne;
@@ -96,7 +133,7 @@ $desktopHeaderPadding: 2rem 8rem;
 
 @mixin hover {
     transition: 0.25s all;
-    color: $darkViolet
+    color: $darkViolet;
 }
 
 @mixin boxShadow {
@@ -111,8 +148,39 @@ $desktopHeaderPadding: 2rem 8rem;
     @include  boxShadow;
     padding: 1rem;
     border-radius: 0.75rem;
-
 }
 
 
 
+
+// 3 icon containers
+@mixin parentDiv {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: $white;
+    padding: 5rem 2rem;
+    border-radius: 0.5rem;
+}
+
+@mixin iconBackground {
+    background-color: $darkViolet;
+    border-radius: 4rem;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -7.4rem;
+}
+
+@mixin iconHeader {
+    @include thirdHeading;
+    margin: -3rem 0 1rem 0;
+}
+
+@mixin iconParagraph {
+    @include paragraphThree;
+}

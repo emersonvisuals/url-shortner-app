@@ -43,4 +43,6 @@ illustrationSrc.src = illustration
 
 import logo from './assets/logo.svg'
 const logoSrc = document.querySelector('.logo')
+const logoFooterSrc = document.querySelector('.footerLogo');
 logoSrc.src = logo
+logoFooterSrc.src = logo
