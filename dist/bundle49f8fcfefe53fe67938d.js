@@ -121,10 +121,10 @@ document.addEventListener('keypress', function (e) {
 
 /***/ }),
 
-/***/ "./src/noLink.js":
-/*!***********************!*\
-  !*** ./src/noLink.js ***!
-  \***********************/
+/***/ "./src/warning.js":
+/*!************************!*\
+  !*** ./src/warning.js ***!
+  \************************/
 /***/ (() => {
 
 var link = document.querySelector('input.textBox');
@@ -1030,8 +1030,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 /* harmony import */ var _input_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input.js */ "./src/input.js");
 /* harmony import */ var _input_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_input_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _noLink_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./noLink.js */ "./src/noLink.js");
-/* harmony import */ var _noLink_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_noLink_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _warning_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./warning.js */ "./src/warning.js");
+/* harmony import */ var _warning_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_warning_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
 /* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
 /* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
@@ -1085,4 +1085,4 @@ logoFooterSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle592214d985f055a5478c.js.map
+//# sourceMappingURL=bundle49f8fcfefe53fe67938d.js.map
