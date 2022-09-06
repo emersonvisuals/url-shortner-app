@@ -63,6 +63,61 @@ shortenItBtn.addEventListener('click', function () {
 
   fetchRequest();
 });
+document.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    var fetchRequest = function fetchRequest() {
+      fetch("https://api.shrtco.de/v2/shorten?url=".concat(textInput.value)).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        console.log(data.result.short_link); // defining structure for URl clicks
+
+        var ul = inputResultWrapper.appendChild(document.createElement('ul'));
+        ul.classList.add('inputUl');
+        var li = ul.appendChild(document.createElement('li'));
+        li.classList.add('inputLi');
+        var pOne = li.appendChild(document.createElement('p'));
+        pOne.classList.add('inputValue');
+        pOne.innerText = "".concat(textInput.value);
+        var div = li.appendChild(document.createElement('div'));
+        div.classList.add('inputContents');
+        var result = div.appendChild(document.createElement('p'));
+        result.classList.add('result');
+        result.innerText = "".concat(data.result.short_link);
+        var btnResult = div.appendChild(document.createElement('button'));
+        btnResult.classList.add('btnResult');
+        btnResult.innerText = 'copy'; // clicked btn style functionality 
+
+        var copyAllBtns = document.querySelectorAll('.btnResult');
+        var finalOutcome = "".concat(data.result.short_link);
+        copyAllBtns.forEach(function (item) {
+          item.addEventListener('click', function () {
+            console.log('clicked');
+            item.innerHTML = 'Clicked!';
+            item.classList.add('active');
+            navigator.clipboard.writeText(finalOutcome);
+          });
+        });
+        textInput.value = '';
+      })["catch"](function (err) {
+        textInput.value = '';
+        console.log(err);
+        console.error('failed to log link');
+        var link = document.querySelector('input.textBox');
+        var errorMessage = document.querySelector('.warning');
+        var errorMessageP = document.querySelector('.warningMessage');
+        var linkPlaceholder = document.querySelector('input.textBox::placeholder');
+        errorMessageP.innerHTML = 'Please enter a valid link';
+        link.classList.add('active');
+        errorMessage.classList.add('active');
+        linkPlaceholder.classList.add('active');
+      });
+    };
+
+    // api request
+    var textInput = document.querySelector('input.textBox');
+    fetchRequest();
+  }
+});
 
 /***/ }),
 
@@ -1030,4 +1085,4 @@ logoFooterSrc.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle85729c6e2e7777f9ebf1.js.map
+//# sourceMappingURL=bundle592214d985f055a5478c.js.map
