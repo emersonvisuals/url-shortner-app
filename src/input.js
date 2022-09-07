@@ -1,10 +1,17 @@
+// button variables
 const shortenItBtn = document.querySelector('button.shortenIt');
 const inputResultWrapper = document.querySelector('.inputResultContainer');
 
-shortenItBtn.addEventListener('click', () => {
-    // api request
-    var textInput = document.querySelector('input.textBox')
+// textbox & warning variables 
+let textInput = document.querySelector('input.textBox')
+let link = document.querySelector('input.textBox');
+let errorMessage = document.querySelector('.warning')
+let errorMessageP = document.querySelector('.warningMessage')
+let linkPlaceholder = document.querySelector('input.textBox::placeholder')
 
+shortenItBtn.addEventListener('click', () => {
+    
+    // api request
     function fetchRequest() {
         fetch(`https://api.shrtco.de/v2/shorten?url=${textInput.value}`)
         .then(response => response.json())
@@ -47,11 +54,6 @@ shortenItBtn.addEventListener('click', () => {
             textInput.value = '';
             console.log(err);
             console.error('failed to log link');
-            
-            const link = document.querySelector('input.textBox');
-            const errorMessage = document.querySelector('.warning')
-            const errorMessageP = document.querySelector('.warningMessage')
-            const linkPlaceholder = document.querySelector('input.textBox::placeholder')
     
             errorMessageP.innerHTML = 'Please enter a valid link';
 
@@ -66,15 +68,19 @@ shortenItBtn.addEventListener('click', () => {
 
 document.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
-            // api request
-        var textInput = document.querySelector('input.textBox')
+        console.log('enter');
 
+        // removing warning message 
+        link.classList.remove('active')
+        errorMessage.classList.remove('active')
+
+        // api request
         function fetchRequest() {
             fetch(`https://api.shrtco.de/v2/shorten?url=${textInput.value}`)
             .then(response => response.json())
             .then(data => {
                 console.log(data.result.short_link)
-
+    
                 // defining structure for URl clicks
                 const ul = inputResultWrapper.appendChild(document.createElement('ul'));
                 ul.classList.add('inputUl');
@@ -91,40 +97,40 @@ document.addEventListener('keypress', function(e) {
                 const btnResult = div.appendChild(document.createElement('button'));
                 btnResult.classList.add('btnResult');
                 btnResult.innerText = 'copy';
-
+    
                 // clicked btn style functionality 
                 const copyAllBtns = document.querySelectorAll('.btnResult');
                 let finalOutcome = `${data.result.short_link}`
-
+    
                 copyAllBtns.forEach(item => {
                     item.addEventListener('click', () => {
                         console.log('clicked');
                         item.innerHTML = 'Clicked!';
                         item.classList.add('active');
-
+    
                         navigator.clipboard.writeText(finalOutcome);
                     })
                 });
+
+                // removing warning errors
+                link.classList.remove('active')
+                errorMessage.classList.remove('active')
+
+                // input set to nothing once callback achieved 
                 textInput.value = '';
             })
             .catch(err => {
                 textInput.value = '';
                 console.log(err);
                 console.error('failed to log link');
-                
-                const link = document.querySelector('input.textBox');
-                const errorMessage = document.querySelector('.warning')
-                const errorMessageP = document.querySelector('.warningMessage')
-                const linkPlaceholder = document.querySelector('input.textBox::placeholder')
         
                 errorMessageP.innerHTML = 'Please enter a valid link';
-
+    
                 link.classList.add('active')
                 errorMessage.classList.add('active')
                 linkPlaceholder.classList.add('active');
             });
         }
         fetchRequest();
-
     } 
 })
