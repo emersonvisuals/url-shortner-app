@@ -17,8 +17,15 @@ $fontSizeSecondaryHeading: 40px;
 $fontSizeThirdHeading: 25px;
 $fontFamily: poppins; 
 
+$fontHeaderOneMobile: 55px;
+
+
 $desktopSidePadding: 0 8rem;
 $desktopHeaderPadding: 2rem 8rem;
+$tabletPadding: 2rem 5rem;
+$mobileHeaderPadding: 1rem 2rem;
+$mobileSidePadding: 0 2rem; 
+
 
 @mixin button {
     background-color: $cyan;
@@ -50,6 +57,7 @@ $desktopHeaderPadding: 2rem 8rem;
     align-items: center;
     justify-content: center;
 }
+
 
 @mixin primaryHeading {
     font-family: $fontFamily;
@@ -93,7 +101,6 @@ $desktopHeaderPadding: 2rem 8rem;
     padding: 0;
 }
 
-
 @mixin paragraphThree {
     font-family: $fontFamily;
     font-size: $fontSizeThree;
@@ -102,6 +109,21 @@ $desktopHeaderPadding: 2rem 8rem;
     margin: 0;
     padding: 0;
 }
+
+
+
+// mobile fonts
+
+@mixin primaryHeadingMobile {
+    @include primaryHeading; 
+    font-size: $fontHeaderOneMobile;
+}
+
+@mixin paragraphMobileOne {
+    @include paragraph;
+    font-size: $fontSizeThree;
+}
+
 
 
 @mixin inputBackdrop {
@@ -217,3 +239,30 @@ $desktopHeaderPadding: 2rem 8rem;
     text-decoration: none;
     font-weight: 500;
 }
+
+
+
+// hamburger menu 
+@mixin hamburgerTrigger {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 0;
+}
+
+@mixin defaultHamburgerStroke {
+    position: absolute;
+    display: initial;
+    content: '';
+    top:1rem;
+    width: 30px;
+    height: 3px;
+    background-color: $gray;
+    z-index: 1;
+}
+

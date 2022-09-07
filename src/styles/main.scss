@@ -55,6 +55,15 @@ header {
             @include button
         }
     }
+
+
+    .hamburgerTrigger {
+        display: none;
+
+        .hamburger {
+            display: none;
+        }
+    }
 }
 
 main {
@@ -69,6 +78,8 @@ main {
         .contentsContainer {
             width: 35rem;
             transform: translateY(-5rem);
+            position: relative;
+            z-index: 1;
 
             h1 {
                 @include primaryHeading;
@@ -389,6 +400,115 @@ footer {
                 padding: 0 0.5rem;
                 cursor: pointer;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: $tabletPadding;
+    }
+
+    main {
+        
+        section.one {
+            padding: $tabletPadding;
+        }
+
+        section.two {
+            padding: $tabletPadding;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    
+    header {
+        padding: $mobileHeaderPadding;
+
+        .boxOne {
+
+            ul.list {
+                display: none;
+            }
+        }
+
+        .boxTwo {
+
+            button {
+                display: none;
+            }
+        }
+
+        .hamburgerTrigger {
+            display: initial;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 0;
+
+            
+            .hamburger {
+                @include defaultHamburgerStroke;
+            }
+
+            .hamburger::after {
+                @include defaultHamburgerStroke;
+                transform: translateY(-0.5rem);
+            }
+
+            .hamburger::before {
+                @include defaultHamburgerStroke;
+                transform: translateY(-1.5rem);
+            }
+        }
+    }
+
+    main {
+
+        section.one {
+            display: flex;
+            flex-direction: column-reverse;
+            height: 150vh;
+            padding: $mobileSidePadding;
+
+            .contentsContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                width: auto;
+
+                h1 {
+                    @include primaryHeadingMobile;
+                }
+
+                p {
+                    @include paragraphMobileOne;
+                    padding: 1rem 0;
+                }
+
+                button.getStarted {
+                    margin: 0 0 2rem 0;
+                }
+            }
+
+            img.illustration {
+                left: 3rem;
+            }
+
+
+        }
+
+        section.two {
+            padding: $mobileSidePadding;
+            padding-top: 2rem;
         }
     }
 }
