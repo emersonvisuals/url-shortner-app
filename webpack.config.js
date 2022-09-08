@@ -5,7 +5,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
-        bundle: path.resolve(__dirname, "src/index.js")
+        bundle: path.resolve(__dirname, "./src/index.js")
     },
     output: {
         path: path.resolve(__dirname, "dist"), 
@@ -20,7 +20,13 @@ module.exports = {
             directory: path.resolve(__dirname, 'dist')
         },
         port: 3000,
-        open: true,
+        open:
+        {
+        app:
+            {
+                name: 'google chrome'
+            }
+        },
         hot: true, 
         compress: true, 
         historyApiFallback: true,
@@ -51,7 +57,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Frontend Mentor | Shortly URL shortening API Challenge',
             filename: 'index.html',
-            template:'src/template.html',
+            template:'./src/template.html',
         }),
         new BrowserSyncPlugin({
             // browse to http://localhost:3000/ during development,
