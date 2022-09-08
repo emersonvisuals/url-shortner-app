@@ -129,7 +129,7 @@ $mobileSidePadding: 0 2rem;
 @mixin inputBackdrop {
     @include flexOne;
     background-color: $darkViolet;
-    background-image: url('/dist/bg-boost-desktop.svg');
+    // background-image: url('/dist/bg-boost-desktop.svg');
     background-size: cover;
     width: 100%;
     padding: 2rem 0 0 0;
