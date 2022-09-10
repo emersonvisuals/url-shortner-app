@@ -21,13 +21,6 @@ module.exports = {
             directory: path.resolve(__dirname, 'dist')
         },
         port: 3000,
-        open:
-        {
-        app:
-            {
-                name: 'google chrome'
-            }
-        },
         hot: true, 
         compress: true, 
         historyApiFallback: true,
@@ -65,7 +58,8 @@ module.exports = {
             // ./public directory is being served
             host: 'localhost',
             port: 3000,
-            server: { baseDir: ['dist'] }
+            server: { baseDir: ['dist'] },
+            browser: 'chrome',
         }),
     ],
 }
