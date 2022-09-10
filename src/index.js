@@ -4,9 +4,7 @@ import './warning.js';
 
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'
-
 import bgShortenDesktop from './assets/bg-shorten-desktop.svg'
-
 import bgShortenMobile from './assets/bg-shorten-mobile.svg'
 
 import iconBrandRecognition from './assets/icon-brand-recognition.svg'
