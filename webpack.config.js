@@ -10,9 +10,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"), 
-        filename: "[name][contenthash].js",
+        filename: "bundle.js",
         clean: true,
-        assetModuleFilename: '[name][ext]', 
     },
     watch: true,
     devtool: 'source-map',
@@ -59,6 +58,7 @@ module.exports = {
             host: 'localhost',
             port: 3000,
             server: { baseDir: ['dist'] },
+            files: ['./dist/*.html'],
             browser: 'chrome',
         }),
     ],

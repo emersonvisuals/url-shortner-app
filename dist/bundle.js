@@ -696,7 +696,7 @@ module.exports = styleTagTransform;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
+module.exports = __webpack_require__.p + "772154c9b0e451733f5e.svg";
 
 /***/ }),
 
@@ -707,7 +707,7 @@ module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
+module.exports = __webpack_require__.p + "4b04bd89ea775da3deff.svg";
 
 /***/ }),
 
@@ -718,7 +718,7 @@ module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
+module.exports = __webpack_require__.p + "0d9742f433f4b0d8752b.svg";
 
 /***/ }),
 
@@ -729,7 +729,7 @@ module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
+module.exports = __webpack_require__.p + "41c34b33a14a3077e506.svg";
 
 /***/ }),
 
@@ -740,7 +740,7 @@ module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
+module.exports = __webpack_require__.p + "c349d3b69f7442e5ac35.svg";
 
 /***/ }),
 
@@ -751,7 +751,7 @@ module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "icon-detailed-records.svg";
+module.exports = __webpack_require__.p + "265c8aea77b546e08ba3.svg";
 
 /***/ }),
 
@@ -762,7 +762,7 @@ module.exports = __webpack_require__.p + "icon-detailed-records.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "icon-facebook.svg";
+module.exports = __webpack_require__.p + "229c75a01827343aef31.svg";
 
 /***/ }),
 
@@ -773,7 +773,7 @@ module.exports = __webpack_require__.p + "icon-facebook.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
+module.exports = __webpack_require__.p + "a1532a74fa781f6fde32.svg";
 
 /***/ }),
 
@@ -784,7 +784,7 @@ module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "icon-instagram.svg";
+module.exports = __webpack_require__.p + "df5873287e1c06a0fe74.svg";
 
 /***/ }),
 
@@ -795,7 +795,7 @@ module.exports = __webpack_require__.p + "icon-instagram.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "icon-pinterest.svg";
+module.exports = __webpack_require__.p + "a2d25ab4c70b78c4028f.svg";
 
 /***/ }),
 
@@ -806,7 +806,7 @@ module.exports = __webpack_require__.p + "icon-pinterest.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "icon-twitter.svg";
+module.exports = __webpack_require__.p + "1d5c6d5e6ab1717a500a.svg";
 
 /***/ }),
 
@@ -817,7 +817,7 @@ module.exports = __webpack_require__.p + "icon-twitter.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "illustration-working.svg";
+module.exports = __webpack_require__.p + "c9b5ef5452363d8be3df.svg";
 
 /***/ }),
 
@@ -828,7 +828,7 @@ module.exports = __webpack_require__.p + "illustration-working.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "logo copy.svg";
+module.exports = __webpack_require__.p + "0da929e690bef4b59420.svg";
 
 /***/ }),
 
@@ -839,7 +839,7 @@ module.exports = __webpack_require__.p + "logo copy.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "logo.svg";
+module.exports = __webpack_require__.p + "834643034343520f3b4d.svg";
 
 /***/ })
 
@@ -1016,4 +1016,4 @@ logoFooterSrc.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__;
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlef66dd9998a165d2ec7be.js.map
+//# sourceMappingURL=bundle.js.map
