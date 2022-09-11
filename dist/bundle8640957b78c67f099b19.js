@@ -865,17 +865,6 @@ module.exports = __webpack_require__.p + "illustration-working.svg";
 
 /***/ }),
 
-/***/ "./src/assets/laughing.svg":
-/*!*********************************!*\
-  !*** ./src/assets/laughing.svg ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "laughing.svg";
-
-/***/ }),
-
 /***/ "./src/assets/logo copy.svg":
 /*!**********************************!*\
   !*** ./src/assets/logo copy.svg ***!
@@ -1057,9 +1046,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
 /* harmony import */ var _src_assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
 /* harmony import */ var _src_assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../src/assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
-/* harmony import */ var _src_assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../src/assets/logo.svg */ "./src/assets/logo.svg");
-/* harmony import */ var _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../src/assets/logo copy.svg */ "./src/assets/logo copy.svg");
-/* harmony import */ var _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./assets/laughing.svg */ "./src/assets/laughing.svg");
+/* harmony import */ var _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../src/assets/logo copy.svg */ "./src/assets/logo copy.svg");
+/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
 
 
 
@@ -1077,6 +1065,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var logoImg = document.getElementById('logoImg');
+logoImg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_16__;
 var iconOne = document.querySelector('.iconOne');
 iconOne.src = _src_assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__;
 var iconTwo = document.querySelector('.iconTwo');
@@ -1093,15 +1083,10 @@ var twitter = document.querySelector('.twitter');
 twitter.src = _src_assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__;
 var illustration = document.querySelector('.illustration');
 illustration.src = _src_assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__;
-var logo = document.getElementById('logo');
-logo.src = _src_assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
 var footerLogo = document.querySelector('.footerLogo');
-footerLogo.src = _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__;
-
-var laughImg = document.getElementById('laughImg');
-laughImg.src = _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_17__;
+footerLogo.src = _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_15__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle89e4f6fd1709aa23e710.js.map
+//# sourceMappingURL=bundle8640957b78c67f099b19.js.map

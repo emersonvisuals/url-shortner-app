@@ -15,8 +15,13 @@ import iconInstagram from '/src/assets/icon-instagram.svg'
 import iconPinterest from '/src/assets/icon-pinterest.svg'
 import iconTwitter from '/src/assets/icon-twitter.svg'
 import illustrationImport from '/src/assets/illustration-working.svg'
-import logoImport from '/src/assets/logo.svg'
 import footerLogoImport from '/src/assets/logo copy.svg'
+
+
+import logo from './assets/logo.svg'
+
+const logoImg = document.getElementById('logoImg')
+logoImg.src = logo
 
 
 const iconOne = document.querySelector('.iconOne')
@@ -43,14 +48,5 @@ twitter.src = iconTwitter
 const illustration = document.querySelector('.illustration')
 illustration.src = illustrationImport
 
-const logo = document.getElementById('logo');
-logo.src = logoImport
-
 const footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = footerLogoImport
-
-
-import laughing from './assets/laughing.svg'
-
-const laughImg = document.getElementById('laughImg')
-laughImg.src = laughing
