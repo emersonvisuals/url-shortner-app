@@ -282,7 +282,7 @@ main {
     section.three::after {
         content: '';
         position: absolute;
-        width: calc(100vw - 16rem);
+        width: calc(100vw - 18rem);
         height: 10px;
         background-color: $cyan;
         z-index: 0;
