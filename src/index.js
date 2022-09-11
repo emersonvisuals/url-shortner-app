@@ -1,4 +1,5 @@
 import './styles/main.scss';
+import './warning.js'
 
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'

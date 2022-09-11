@@ -1,6 +1,31 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/warning.js":
+/*!************************!*\
+  !*** ./src/warning.js ***!
+  \************************/
+/***/ (() => {
+
+var link = document.querySelector('input.textBox');
+var errorMessage = document.querySelector('.warning');
+var btn = document.querySelector('button.shortenIt');
+btn.addEventListener('click', function () {
+  console.log('test');
+  var linkPlaceholder = document.querySelector('input.textBox::placeholder');
+
+  if (link.value === '') {
+    link.classList.add('active');
+    errorMessage.classList.add('active');
+    linkPlaceholder.classList.add('active');
+  } else {
+    link.classList.remove('active');
+    errorMessage.classList.remove('active');
+    linkPlaceholder.classList.remove('active');
+  }
+});
+
+/***/ }),
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
@@ -8,6 +33,7 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -39,6 +65,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: poppins;\n  mar
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -150,6 +177,7 @@ module.exports = function (cssWithMappingToString) {
   \********************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (url, options) {
@@ -188,6 +216,7 @@ module.exports = function (url, options) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -219,6 +248,7 @@ module.exports = function (item) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -273,6 +303,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -386,6 +417,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -434,6 +466,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -454,6 +487,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -475,6 +509,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -554,6 +589,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -579,6 +615,7 @@ module.exports = styleTagTransform;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
 
 /***/ }),
@@ -589,6 +626,7 @@ module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
   \****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
 
 /***/ }),
@@ -599,6 +637,7 @@ module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
 
 /***/ }),
@@ -609,6 +648,7 @@ module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
 
 /***/ }),
@@ -619,6 +659,7 @@ module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
   \***********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
 
 /***/ }),
@@ -629,6 +670,7 @@ module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-detailed-records.svg";
 
 /***/ }),
@@ -639,6 +681,7 @@ module.exports = __webpack_require__.p + "icon-detailed-records.svg";
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-facebook.svg";
 
 /***/ }),
@@ -649,6 +692,7 @@ module.exports = __webpack_require__.p + "icon-facebook.svg";
   \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
 
 /***/ }),
@@ -659,6 +703,7 @@ module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-instagram.svg";
 
 /***/ }),
@@ -669,6 +714,7 @@ module.exports = __webpack_require__.p + "icon-instagram.svg";
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-pinterest.svg";
 
 /***/ }),
@@ -679,6 +725,7 @@ module.exports = __webpack_require__.p + "icon-pinterest.svg";
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "icon-twitter.svg";
 
 /***/ }),
@@ -689,6 +736,7 @@ module.exports = __webpack_require__.p + "icon-twitter.svg";
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "illustration-working.svg";
 
 /***/ }),
@@ -699,6 +747,7 @@ module.exports = __webpack_require__.p + "illustration-working.svg";
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "logo copy.svg";
 
 /***/ }),
@@ -709,6 +758,7 @@ module.exports = __webpack_require__.p + "logo copy.svg";
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "logo.svg";
 
 /***/ })
@@ -848,27 +898,31 @@ module.exports = __webpack_require__.p + "logo.svg";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
-/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
-/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
-/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
-/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
-/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
-/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
-/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
-/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
-/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
-/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
-/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
-/* harmony import */ var _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/logo copy.svg */ "./src/assets/logo copy.svg");
-/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
+/* harmony import */ var _warning_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./warning.js */ "./src/warning.js");
+/* harmony import */ var _warning_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_warning_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
+/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
+/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
+/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
+/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
+/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
+/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
+/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
+/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
+/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
+/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
+/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
+/* harmony import */ var _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/logo copy.svg */ "./src/assets/logo copy.svg");
+/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
+
 
 
 
@@ -885,27 +939,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var logoImg = document.getElementById('logoImg');
-logoImg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__;
+logoImg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
 var iconOne = document.querySelector('.iconOne');
-iconOne.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__;
+iconOne.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_6__;
 var iconTwo = document.querySelector('.iconTwo');
-iconTwo.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__;
+iconTwo.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_7__;
 var iconThree = document.querySelector('.iconThree');
-iconThree.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__;
+iconThree.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_8__;
 var facebook = document.querySelector('.facebook');
-facebook.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__;
+facebook.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_9__;
 var instagram = document.querySelector('.instagram');
-instagram.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__;
+instagram.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_10__;
 var pinterest = document.querySelector('.pinterest');
-pinterest.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__;
+pinterest.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_11__;
 var twitter = document.querySelector('.twitter');
-twitter.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__;
+twitter.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_12__;
 var illustration = document.querySelector('.illustration');
-illustration.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__;
+illustration.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_13__;
 var footerLogo = document.querySelector('.footerLogo');
-footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_13__;
+footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_14__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlec34a7c226aed4723250e.js.map
+//# sourceMappingURL=bundle63b2061c6de556e47a21.js.map
