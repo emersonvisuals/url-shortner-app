@@ -865,6 +865,17 @@ module.exports = __webpack_require__.p + "illustration-working.svg";
 
 /***/ }),
 
+/***/ "./src/assets/laughing.svg":
+/*!*********************************!*\
+  !*** ./src/assets/laughing.svg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "laughing.svg";
+
+/***/ }),
+
 /***/ "./src/assets/logo copy.svg":
 /*!**********************************!*\
   !*** ./src/assets/logo copy.svg ***!
@@ -1048,6 +1059,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
 /* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
 /* harmony import */ var _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./assets/logo copy.svg */ "./src/assets/logo copy.svg");
+/* harmony import */ var _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./assets/laughing.svg */ "./src/assets/laughing.svg");
 
 
 
@@ -1085,8 +1097,11 @@ var logo = document.getElementById('logo');
 logo.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
 var footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__;
+
+var laughImg = document.getElementById('laughImg');
+laughImg.src = _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_17__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle5da2535ecbbf9afeb5c2.js.map
+//# sourceMappingURL=bundlea32dc72e6672d9060100.js.map

@@ -48,3 +48,9 @@ logo.src = logoImport
 
 const footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = footerLogoImport
+
+
+import laughing from './assets/laughing.svg'
+
+const laughImg = document.getElementById('laughImg')
+laughImg.src = laughing
