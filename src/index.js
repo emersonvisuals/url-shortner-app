@@ -1,4 +1,5 @@
 import './styles/main.scss';
+import warning from './warning';
 
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'
@@ -45,3 +46,9 @@ illustration.src = illustrationImport
 
 const footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = footerLogoImport
+
+
+const btn = document.querySelector('button.shortenIt');
+btn.addEventListener('click', warning);
+
+warning();
