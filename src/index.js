@@ -1,5 +1,6 @@
 import './styles/main.scss';
-import './warning.js'
+import warning from './warning'
+import input from './input'
 
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'
@@ -46,3 +47,7 @@ illustration.src = illustrationImport
 
 const footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = footerLogoImport
+
+
+warning();
+input();
