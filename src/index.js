@@ -2,10 +2,46 @@ import './styles/main.scss';
 import './input.js';
 import './warning.js';
 
-import laughing from './assets/logo.svg'
+import bgBoostDesktop from './assets/bg-boost-desktop.svg'
+import bgBoostMobile from './assets/bg-boost-mobile.svg'
+import bgShortenDesktop from './assets/bg-shorten-desktop.svg'
+import bgShortenMobile from './assets/bg-shorten-mobile.svg'
 
-const laughImg = document.getElementById('logo')
-laughImg.src = laughing
+import iconBrandRecognition from './assets/icon-brand-recognition.svg'
+const brandRecognitionSrc = document.querySelector('.iconOne')
+brandRecognitionSrc.src = iconBrandRecognition
 
+import iconDetailedRecords from './assets/icon-detailed-records.svg'
+const detailedRecordsSrc = document.querySelector('.iconTwo')
+detailedRecordsSrc.src = iconDetailedRecords
 
+import iconFullyCustomizable from './assets/icon-fully-customizable.svg'
+const fullyCustomizableSrc = document.querySelector('.iconThree')
+fullyCustomizableSrc.src = iconFullyCustomizable
 
+import iconFacebook from './assets/icon-facebook.svg'
+const facebookSrc = document.querySelector('.facebook')
+facebookSrc.src = iconFacebook
+
+import iconInstagram from './assets/icon-instagram.svg'
+const instagramSrc = document.querySelector('.instagram');
+instagramSrc.src = iconInstagram
+
+import iconPinterest from './assets/icon-pinterest.svg'
+const pinterestSrc = document.querySelector('.pinterest');
+pinterestSrc.src = iconPinterest
+
+import iconTwitter from './assets/icon-twitter.svg'
+const twitterSrc = document.querySelector('.twitter')
+twitterSrc.src = iconTwitter
+
+import illustration from './assets/illustration-working.svg'
+const illustrationSrc = document.querySelector('.illustration')
+illustrationSrc.src = illustration
+
+import logoImport from './assets/logo.svg'
+import footerLogo from './assets/logo copy.svg'
+const logo = document.getElementById('logo')
+const logoFooterSrc = document.querySelector('.footerLogo');
+logo.src = logoImport
+logoFooterSrc.src = footerLogo

@@ -4,63 +4,57 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, 'src/index.js'),
+      bundle: path.resolve(__dirname, "./src/index.js")
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name][contenthash].js',
-    clean: true,
-    assetModuleFilename: '[name][ext]',
+      path: path.resolve(__dirname, "dist"), 
+      filename: "bundle.js",
+      clean: true,
   },
-  devtool: 'source-map',
+  watch: true,
   devServer: {
-    static: {
-      directory: path.resolve(__dirname, 'dist'),
-    },
-    port: 3000,
-    open: true,
-    hot: true,
-    compress: true,
-    historyApiFallback: true,
+      port: 3000,
+      contentBase: path.resolve(__dirname, 'dist'),
+      hot: true
   },
   module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
+      rules: [
+          {
+              test:/\.scss$/,
+              use: ['style-loader', 'css-loader', 'sass-loader'],
           },
-        },
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-    ],
+          {
+              test:/\.js$/,
+              exclude: /node_modules/,
+              use: {
+                  loader: 'babel-loader',
+                  options: {
+                      presets: ['@babel/preset-env']
+                  },
+              },
+          },
+          {
+              test: /\.(png|svg|jpg|jpeg|pdf|gif)$/i,
+              type: 'asset/resource', 
+          },
+      ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Webpack App',
-      filename: 'index.html',
-      template: 'src/template.html',
-    }),
-    new BrowserSyncPlugin({
-        // browse to http://localhost:3000/ during development,
-        // ./public directory is being served
-        host: 'localhost',
-        port: 3000,
-        server: { baseDir: ['dist'] },
-        files: ['./dist/*.html'],
-        browser: 'chrome',
-    }),
+      new HtmlWebpackPlugin({
+          title: 'URL Shortner',
+          filename: 'index.html',
+          template:'./src/template.html',
+      }),
+      new BrowserSyncPlugin({
+          // browse to http://localhost:3000/ during development,
+          // ./public directory is being served
+          host: 'localhost',
+          port: 3000,
+          server: { baseDir: ['dist'] },
+          files: ['./dist/*.html'],
+          browser: 'chrome',
+      }),
   ],
 }
