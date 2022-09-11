@@ -40,8 +40,9 @@ const illustrationSrc = document.querySelector('.illustration')
 illustrationSrc.src = illustration
 
 import logoImport from './assets/logo.svg'
-import footerLogo from './assets/logo copy.svg'
-const logo = document.getElementById('logo')
-const logoFooterSrc = document.querySelector('.footerLogo');
+const logo = document.getElementById('logo');
 logo.src = logoImport
-logoFooterSrc.src = footerLogo
+
+import footerLogoImport from './assets/logo copy.svg'
+const footerLogo = document.querySelector('.footerLogo');
+footerLogo.src = footerLogoImport
