@@ -19,6 +19,7 @@ $fontFamily: poppins;
 
 $fontHeaderOneMobile: 55px;
 $fontHeaderTwoMobile: 45px;
+$fontHeaderThreeMobile: 30px;
 
 
 $desktopSidePadding: 0 8rem;
@@ -132,11 +133,16 @@ $mobileSidePaddingSectionThree: 8rem 2rem;
 }
 
 
+@mixin secondaryHeadingMobileTwo {
+    @include primaryHeading; 
+    font-size: $fontHeaderThreeMobile;
+}
+
+
 
 @mixin inputBackdrop {
     @include flexOne;
     background-color: $darkViolet;
-    // background-image: url('/dist/bg-boost-desktop.svg');
     background-size: cover;
     width: 100%;
     padding: 2rem 0 0 0;

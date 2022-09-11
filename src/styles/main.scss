@@ -111,6 +111,7 @@ main {
 
         .inputContainer {
             @include inputBackdrop;
+            background-image: url('/src/assets/bg-boost-desktop.svg');
             transform: translateY(-7rem);
 
             .inputContents {
@@ -292,7 +293,7 @@ main {
         flex-direction: column;
         width: 100vw;
         height: 15rem;
-        // background-image: url('/src/assets/bg-boost-desktop.svg');
+        background-image: url('/src/assets/bg-boost-desktop.svg');
         background-color: $darkViolet;
         background-size: cover;
         background-repeat: no-repeat;
@@ -521,16 +522,29 @@ footer {
                         margin: 0;
                     }
 
-                    
+                    input.textBox.active {
+                        margin: 0;
+                    }
+
                     button.shortenIt {
                         margin: 1rem 0 0 0;
                     }
+                    
+                    p.warningMessage {
+                        transform: translateY(0.5rem);
+                    }
                 }
+            }
+
+            .inputResultContainer {
+                margin: 0 0 4rem 0;
             }
         }
 
         section.three {
             padding: $mobileSidePaddingSectionThree;
+            height: 65rem;
+            
 
             .subheading {
                 display: flex;
@@ -548,6 +562,82 @@ footer {
                     @include paragraphMobileOne;
                     z-index: 0;
                 }
+            }
+
+            .boxes {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                height: auto;
+                text-align: center;
+                padding: 0 0 3rem 0;
+
+                .brandRecognition {
+                    @include flexOne;
+                }
+
+                .detailedRecords {
+                    @include flexOne;
+                }
+
+                .fullyCustomizable {
+                    @include flexOne;
+                }
+            }
+        }
+
+        section.three::after {
+            height: 1000px;
+            width: 10px;
+        }
+        
+        section.four {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+            h2 {
+                @include secondaryHeadingMobileTwo;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    footer {
+        height: auto;
+        padding: $mobileSidePadding;
+        @include flexOne;
+        flex-direction: column;
+
+        .footerLogo {
+            padding: 5rem 0 3rem 0;
+        }
+
+        .footerContents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .footerList {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .socials {
+                margin: 0;
+                padding: 0;
+                transform: translateY(-5rem);
             }
         }
     }
