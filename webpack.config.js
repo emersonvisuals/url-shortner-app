@@ -43,7 +43,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Frontend Mentor | Shortly URL shortening API Challenge',
+            title: 'URL Shortner',
             filename: 'index.html',
             template:'./src/template.html',
         }),

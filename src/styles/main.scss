@@ -474,7 +474,7 @@ footer {
         section.one {
             display: flex;
             flex-direction: column-reverse;
-            height: 150vh;
+            height: 60rem;
             padding: $mobileSidePadding;
 
             .contentsContainer {
@@ -509,6 +509,46 @@ footer {
         section.two {
             padding: $mobileSidePadding;
             padding-top: 2rem;
+
+            .inputContainer {
+
+                .inputContents {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    margin: 1rem;
+
+                    input.textBox {
+                        margin: 0;
+                    }
+
+                    
+                    button.shortenIt {
+                        margin: 1rem 0 0 0;
+                    }
+                }
+            }
+        }
+
+        section.three {
+            padding: $mobileSidePaddingSectionThree;
+
+            .subheading {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                width: auto;
+
+                h2 {
+                    @include secondaryHeadingMobile;
+                }
+
+                p {
+                    @include paragraphMobileOne;
+                    z-index: 0;
+                }
+            }
         }
     }
 }

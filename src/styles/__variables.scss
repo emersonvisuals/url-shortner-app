@@ -18,6 +18,7 @@ $fontSizeThirdHeading: 25px;
 $fontFamily: poppins; 
 
 $fontHeaderOneMobile: 55px;
+$fontHeaderTwoMobile: 45px;
 
 
 $desktopSidePadding: 0 8rem;
@@ -25,6 +26,7 @@ $desktopHeaderPadding: 2rem 8rem;
 $tabletPadding: 2rem 5rem;
 $mobileHeaderPadding: 1rem 2rem;
 $mobileSidePadding: 0 2rem; 
+$mobileSidePaddingSectionThree: 8rem 2rem; 
 
 
 @mixin button {
@@ -122,6 +124,11 @@ $mobileSidePadding: 0 2rem;
 @mixin paragraphMobileOne {
     @include paragraph;
     font-size: $fontSizeThree;
+}
+
+@mixin secondaryHeadingMobile {
+    @include primaryHeading; 
+    font-size: $fontHeaderTwoMobile;
 }
 
 
