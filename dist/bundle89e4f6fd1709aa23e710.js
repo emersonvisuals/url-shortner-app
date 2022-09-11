@@ -1049,16 +1049,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
 /* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
 /* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
-/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
-/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
-/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
-/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
-/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
-/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
-/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
-/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
-/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
-/* harmony import */ var _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./assets/logo copy.svg */ "./src/assets/logo copy.svg");
+/* harmony import */ var _src_assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
+/* harmony import */ var _src_assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../src/assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
+/* harmony import */ var _src_assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../src/assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
+/* harmony import */ var _src_assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../src/assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
+/* harmony import */ var _src_assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../src/assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
+/* harmony import */ var _src_assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
+/* harmony import */ var _src_assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
+/* harmony import */ var _src_assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../src/assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
+/* harmony import */ var _src_assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../src/assets/logo.svg */ "./src/assets/logo.svg");
+/* harmony import */ var _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../src/assets/logo copy.svg */ "./src/assets/logo copy.svg");
 /* harmony import */ var _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./assets/laughing.svg */ "./src/assets/laughing.svg");
 
 
@@ -1078,25 +1078,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var iconOne = document.querySelector('.iconOne');
-iconOne.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__;
+iconOne.src = _src_assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__;
 var iconTwo = document.querySelector('.iconTwo');
-iconTwo.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__;
+iconTwo.src = _src_assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__;
 var iconThree = document.querySelector('.iconThree');
-iconThree.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__;
+iconThree.src = _src_assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__;
 var facebook = document.querySelector('.facebook');
-facebook.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__;
+facebook.src = _src_assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__;
 var instagram = document.querySelector('.instagram');
-instagram.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__;
+instagram.src = _src_assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__;
 var pinterest = document.querySelector('.pinterest');
-pinterest.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__;
+pinterest.src = _src_assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__;
 var twitter = document.querySelector('.twitter');
-twitter.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__;
+twitter.src = _src_assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__;
 var illustration = document.querySelector('.illustration');
-illustration.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__;
+illustration.src = _src_assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__;
 var logo = document.getElementById('logo');
-logo.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
+logo.src = _src_assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
 var footerLogo = document.querySelector('.footerLogo');
-footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__;
+footerLogo.src = _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_16__;
 
 var laughImg = document.getElementById('laughImg');
 laughImg.src = _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_17__;
@@ -1104,4 +1104,4 @@ laughImg.src = _assets_laughing_svg__WEBPACK_IMPORTED_MODULE_17__;
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlea32dc72e6672d9060100.js.map
+//# sourceMappingURL=bundle89e4f6fd1709aa23e710.js.map
