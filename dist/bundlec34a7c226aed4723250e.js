@@ -1,155 +1,6 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/input.js":
-/*!**********************!*\
-  !*** ./src/input.js ***!
-  \**********************/
-/***/ (() => {
-
-// button variables
-var shortenItBtn = document.querySelector('button.shortenIt');
-var inputResultWrapper = document.querySelector('.inputResultContainer'); // textbox & warning variables 
-
-var textInput = document.querySelector('input.textBox');
-var link = document.querySelector('input.textBox');
-var errorMessage = document.querySelector('.warning');
-var errorMessageP = document.querySelector('.warningMessage');
-var linkPlaceholder = document.querySelector('input.textBox::placeholder');
-shortenItBtn.addEventListener('click', function () {
-  // api request
-  function fetchRequest() {
-    fetch("https://api.shrtco.de/v2/shorten?url=".concat(textInput.value)).then(function (response) {
-      return response.json();
-    }).then(function (data) {
-      console.log(data.result.short_link); // defining structure for URl clicks
-
-      var ul = inputResultWrapper.appendChild(document.createElement('ul'));
-      ul.classList.add('inputUl');
-      var li = ul.appendChild(document.createElement('li'));
-      li.classList.add('inputLi');
-      var pOne = li.appendChild(document.createElement('p'));
-      pOne.classList.add('inputValue');
-      pOne.innerText = "".concat(textInput.value);
-      var div = li.appendChild(document.createElement('div'));
-      div.classList.add('inputContents');
-      var result = div.appendChild(document.createElement('p'));
-      result.classList.add('result');
-      result.innerText = "".concat(data.result.short_link);
-      var btnResult = div.appendChild(document.createElement('button'));
-      btnResult.classList.add('btnResult');
-      btnResult.innerText = 'copy'; // clicked btn style functionality 
-
-      var copyAllBtns = document.querySelectorAll('.btnResult');
-      var finalOutcome = "".concat(data.result.short_link);
-      copyAllBtns.forEach(function (item) {
-        item.addEventListener('click', function () {
-          console.log('clicked');
-          item.innerHTML = 'Clicked!';
-          item.classList.add('active');
-          navigator.clipboard.writeText(finalOutcome);
-        });
-      });
-      textInput.value = '';
-    })["catch"](function (err) {
-      textInput.value = '';
-      console.log(err);
-      console.error('failed to log link');
-      errorMessageP.innerHTML = 'Please enter a valid link';
-      link.classList.add('active');
-      errorMessage.classList.add('active');
-      linkPlaceholder.classList.add('active');
-    });
-  }
-
-  fetchRequest();
-});
-document.addEventListener('keypress', function (e) {
-  if (e.key === 'Enter') {
-    // api request
-    var fetchRequest = function fetchRequest() {
-      fetch("https://api.shrtco.de/v2/shorten?url=".concat(textInput.value)).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        console.log(data.result.short_link); // defining structure for URl clicks
-
-        var ul = inputResultWrapper.appendChild(document.createElement('ul'));
-        ul.classList.add('inputUl');
-        var li = ul.appendChild(document.createElement('li'));
-        li.classList.add('inputLi');
-        var pOne = li.appendChild(document.createElement('p'));
-        pOne.classList.add('inputValue');
-        pOne.innerText = "".concat(textInput.value);
-        var div = li.appendChild(document.createElement('div'));
-        div.classList.add('inputContents');
-        var result = div.appendChild(document.createElement('p'));
-        result.classList.add('result');
-        result.innerText = "".concat(data.result.short_link);
-        var btnResult = div.appendChild(document.createElement('button'));
-        btnResult.classList.add('btnResult');
-        btnResult.innerText = 'copy'; // clicked btn style functionality 
-
-        var copyAllBtns = document.querySelectorAll('.btnResult');
-        var finalOutcome = "".concat(data.result.short_link);
-        copyAllBtns.forEach(function (item) {
-          item.addEventListener('click', function () {
-            console.log('clicked');
-            item.innerHTML = 'Clicked!';
-            item.classList.add('active');
-            navigator.clipboard.writeText(finalOutcome);
-          });
-        }); // removing warning errors
-
-        link.classList.remove('active');
-        errorMessage.classList.remove('active'); // input set to nothing once callback achieved 
-
-        textInput.value = '';
-      })["catch"](function (err) {
-        textInput.value = '';
-        console.log(err);
-        console.error('failed to log link');
-        errorMessageP.innerHTML = 'Please enter a valid link';
-        link.classList.add('active');
-        errorMessage.classList.add('active');
-        linkPlaceholder.classList.add('active');
-      });
-    };
-
-    console.log('enter'); // removing warning message 
-
-    link.classList.remove('active');
-    errorMessage.classList.remove('active');
-    fetchRequest();
-  }
-});
-
-/***/ }),
-
-/***/ "./src/warning.js":
-/*!************************!*\
-  !*** ./src/warning.js ***!
-  \************************/
-/***/ (() => {
-
-var link = document.querySelector('input.textBox');
-var errorMessage = document.querySelector('.warning');
-var btn = document.querySelector('button.shortenIt');
-btn.addEventListener('click', function () {
-  console.log('test');
-  var linkPlaceholder = document.querySelector('input.textBox::placeholder');
-
-  if (link.value === '') {
-    link.classList.add('active');
-    errorMessage.classList.add('active');
-    linkPlaceholder.classList.add('active');
-  } else {
-    link.classList.remove('active');
-    errorMessage.classList.remove('active');
-    linkPlaceholder.classList.remove('active');
-  }
-});
-
-/***/ }),
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
@@ -157,7 +8,6 @@ btn.addEventListener('click', function () {
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -189,7 +39,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: poppins;\n  mar
   \*****************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /*
@@ -301,7 +150,6 @@ module.exports = function (cssWithMappingToString) {
   \********************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 module.exports = function (url, options) {
@@ -340,7 +188,6 @@ module.exports = function (url, options) {
   \************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 module.exports = function (item) {
@@ -372,7 +219,6 @@ module.exports = function (item) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -427,7 +273,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var stylesInDOM = [];
@@ -541,7 +386,6 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var memo = {};
@@ -590,7 +434,6 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -611,7 +454,6 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -633,7 +475,6 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -713,7 +554,6 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -739,7 +579,6 @@ module.exports = styleTagTransform;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
 
 /***/ }),
@@ -750,7 +589,6 @@ module.exports = __webpack_require__.p + "bg-boost-desktop.svg";
   \****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
 
 /***/ }),
@@ -761,7 +599,6 @@ module.exports = __webpack_require__.p + "bg-boost-mobile.svg";
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
 
 /***/ }),
@@ -772,7 +609,6 @@ module.exports = __webpack_require__.p + "bg-shorten-desktop.svg";
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
 
 /***/ }),
@@ -783,7 +619,6 @@ module.exports = __webpack_require__.p + "bg-shorten-mobile.svg";
   \***********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
 
 /***/ }),
@@ -794,7 +629,6 @@ module.exports = __webpack_require__.p + "icon-brand-recognition.svg";
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "icon-detailed-records.svg";
 
 /***/ }),
@@ -805,7 +639,6 @@ module.exports = __webpack_require__.p + "icon-detailed-records.svg";
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "icon-facebook.svg";
 
 /***/ }),
@@ -816,7 +649,6 @@ module.exports = __webpack_require__.p + "icon-facebook.svg";
   \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
 
 /***/ }),
@@ -827,7 +659,6 @@ module.exports = __webpack_require__.p + "icon-fully-customizable.svg";
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "icon-instagram.svg";
 
 /***/ }),
@@ -838,7 +669,6 @@ module.exports = __webpack_require__.p + "icon-instagram.svg";
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "icon-pinterest.svg";
 
 /***/ }),
@@ -849,7 +679,6 @@ module.exports = __webpack_require__.p + "icon-pinterest.svg";
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "icon-twitter.svg";
 
 /***/ }),
@@ -860,7 +689,6 @@ module.exports = __webpack_require__.p + "icon-twitter.svg";
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "illustration-working.svg";
 
 /***/ }),
@@ -871,7 +699,6 @@ module.exports = __webpack_require__.p + "illustration-working.svg";
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "logo copy.svg";
 
 /***/ }),
@@ -882,7 +709,6 @@ module.exports = __webpack_require__.p + "logo copy.svg";
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "logo.svg";
 
 /***/ })
@@ -1022,34 +848,27 @@ module.exports = __webpack_require__.p + "logo.svg";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _input_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input.js */ "./src/input.js");
-/* harmony import */ var _input_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_input_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _warning_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./warning.js */ "./src/warning.js");
-/* harmony import */ var _warning_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_warning_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
-/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
-/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
-/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
-/* harmony import */ var _src_assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
-/* harmony import */ var _src_assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../src/assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
-/* harmony import */ var _src_assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../src/assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
-/* harmony import */ var _src_assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../src/assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
-/* harmony import */ var _src_assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../src/assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
-/* harmony import */ var _src_assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
-/* harmony import */ var _src_assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
-/* harmony import */ var _src_assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../src/assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
-/* harmony import */ var _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../src/assets/logo copy.svg */ "./src/assets/logo copy.svg");
-/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
-
-
+/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
+/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
+/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
+/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
+/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
+/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
+/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
+/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
+/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
+/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
+/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
+/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
+/* harmony import */ var _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/logo copy.svg */ "./src/assets/logo copy.svg");
+/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
 
 
 
@@ -1066,27 +885,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var logoImg = document.getElementById('logoImg');
-logoImg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_16__;
+logoImg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_14__;
 var iconOne = document.querySelector('.iconOne');
-iconOne.src = _src_assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__;
+iconOne.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_5__;
 var iconTwo = document.querySelector('.iconTwo');
-iconTwo.src = _src_assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__;
+iconTwo.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_6__;
 var iconThree = document.querySelector('.iconThree');
-iconThree.src = _src_assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__;
+iconThree.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_7__;
 var facebook = document.querySelector('.facebook');
-facebook.src = _src_assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__;
+facebook.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_8__;
 var instagram = document.querySelector('.instagram');
-instagram.src = _src_assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__;
+instagram.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_9__;
 var pinterest = document.querySelector('.pinterest');
-pinterest.src = _src_assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__;
+pinterest.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_10__;
 var twitter = document.querySelector('.twitter');
-twitter.src = _src_assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__;
+twitter.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_11__;
 var illustration = document.querySelector('.illustration');
-illustration.src = _src_assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__;
+illustration.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_12__;
 var footerLogo = document.querySelector('.footerLogo');
-footerLogo.src = _src_assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_15__;
+footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_13__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle8640957b78c67f099b19.js.map
+//# sourceMappingURL=bundlec34a7c226aed4723250e.js.map

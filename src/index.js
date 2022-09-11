@@ -1,28 +1,23 @@
 import './styles/main.scss';
-import './input.js';
-import './warning.js';
 
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'
 import bgShortenDesktop from './assets/bg-shorten-desktop.svg'
 import bgShortenMobile from './assets/bg-shorten-mobile.svg'
 
-import iconBrandRecognition from '/src/assets/icon-brand-recognition.svg'
-import iconDetailedRecords from '/src/assets/icon-detailed-records.svg'
-import iconFullyCustomizable from '/src/assets/icon-fully-customizable.svg'
-import iconFacebook from '/src/assets/icon-facebook.svg'
-import iconInstagram from '/src/assets/icon-instagram.svg'
-import iconPinterest from '/src/assets/icon-pinterest.svg'
-import iconTwitter from '/src/assets/icon-twitter.svg'
-import illustrationImport from '/src/assets/illustration-working.svg'
-import footerLogoImport from '/src/assets/logo copy.svg'
-
-
+import iconBrandRecognition from './assets/icon-brand-recognition.svg'
+import iconDetailedRecords from './assets/icon-detailed-records.svg'
+import iconFullyCustomizable from './assets/icon-fully-customizable.svg'
+import iconFacebook from './assets/icon-facebook.svg'
+import iconInstagram from './assets/icon-instagram.svg'
+import iconPinterest from './assets/icon-pinterest.svg'
+import iconTwitter from './assets/icon-twitter.svg'
+import illustrationImport from './assets/illustration-working.svg'
+import footerLogoImport from './assets/logo copy.svg'
 import logo from './assets/logo.svg'
 
 const logoImg = document.getElementById('logoImg')
 logoImg.src = logo
-
 
 const iconOne = document.querySelector('.iconOne')
 iconOne.src = iconBrandRecognition
