@@ -2,139 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/input.js":
-/*!**********************!*\
-  !*** ./src/input.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function input() {
-  // button variables
-  var shortenItBtn = document.querySelector('button.shortenIt');
-  var inputResultWrapper = document.querySelector('.inputResultContainer'); // textbox & warning variables 
-
-  var textInput = document.querySelector('input.textBox');
-  var link = document.querySelector('input.textBox');
-  var errorMessage = document.querySelector('.warning');
-  var errorMessageP = document.querySelector('.warningMessage');
-  var linkPlaceholder = document.querySelector('input.textBox::placeholder');
-  shortenItBtn.addEventListener('click', function () {
-    // api request
-    function fetchRequest() {
-      fetch("https://api.shrtco.de/v2/shorten?url=".concat(textInput.value)).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        console.log(data.result.short_link); // defining structure for URl clicks
-
-        var ul = inputResultWrapper.appendChild(document.createElement('ul'));
-        ul.classList.add('inputUl');
-        var li = ul.appendChild(document.createElement('li'));
-        li.classList.add('inputLi');
-        var pOne = li.appendChild(document.createElement('p'));
-        pOne.classList.add('inputValue');
-        pOne.innerText = "".concat(textInput.value);
-        var div = li.appendChild(document.createElement('div'));
-        div.classList.add('inputContents');
-        var result = div.appendChild(document.createElement('p'));
-        result.classList.add('result');
-        result.innerText = "".concat(data.result.short_link);
-        var btnResult = div.appendChild(document.createElement('button'));
-        btnResult.classList.add('btnResult');
-        btnResult.innerText = 'copy'; // clicked btn style functionality 
-
-        var copyAllBtns = document.querySelectorAll('.btnResult');
-        var finalOutcome = "".concat(data.result.short_link);
-        copyAllBtns.forEach(function (item) {
-          item.addEventListener('click', function () {
-            console.log('clicked');
-            item.innerHTML = 'Clicked!';
-            item.classList.add('active');
-            navigator.clipboard.writeText(finalOutcome);
-          });
-        });
-        textInput.value = '';
-      })["catch"](function (err) {
-        textInput.value = '';
-        console.log(err);
-        console.error('failed to log link');
-        errorMessageP.innerHTML = 'Please enter a valid link';
-        link.classList.add('active');
-        errorMessage.classList.add('active');
-        linkPlaceholder.classList.add('active');
-      });
-    }
-
-    fetchRequest();
-  });
-  document.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      // api request
-      var fetchRequest = function fetchRequest() {
-        fetch("https://api.shrtco.de/v2/shorten?url=".concat(textInput.value)).then(function (response) {
-          return response.json();
-        }).then(function (data) {
-          console.log(data.result.short_link); // defining structure for URl clicks
-
-          var ul = inputResultWrapper.appendChild(document.createElement('ul'));
-          ul.classList.add('inputUl');
-          var li = ul.appendChild(document.createElement('li'));
-          li.classList.add('inputLi');
-          var pOne = li.appendChild(document.createElement('p'));
-          pOne.classList.add('inputValue');
-          pOne.innerText = "".concat(textInput.value);
-          var div = li.appendChild(document.createElement('div'));
-          div.classList.add('inputContents');
-          var result = div.appendChild(document.createElement('p'));
-          result.classList.add('result');
-          result.innerText = "".concat(data.result.short_link);
-          var btnResult = div.appendChild(document.createElement('button'));
-          btnResult.classList.add('btnResult');
-          btnResult.innerText = 'copy'; // clicked btn style functionality 
-
-          var copyAllBtns = document.querySelectorAll('.btnResult');
-          var finalOutcome = "".concat(data.result.short_link);
-          copyAllBtns.forEach(function (item) {
-            item.addEventListener('click', function () {
-              console.log('clicked');
-              item.innerHTML = 'Clicked!';
-              item.classList.add('active');
-              navigator.clipboard.writeText(finalOutcome);
-            });
-          }); // removing warning errors
-
-          link.classList.remove('active');
-          errorMessage.classList.remove('active'); // input set to nothing once callback achieved 
-
-          textInput.value = '';
-        })["catch"](function (err) {
-          textInput.value = '';
-          console.log(err);
-          console.error('failed to log link');
-          errorMessageP.innerHTML = 'Please enter a valid link';
-          link.classList.add('active');
-          errorMessage.classList.add('active');
-          linkPlaceholder.classList.add('active');
-        });
-      };
-
-      console.log('enter'); // removing warning message 
-
-      link.classList.remove('active');
-      errorMessage.classList.remove('active');
-      fetchRequest();
-    }
-  });
-}
-
-input();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (input);
-
-/***/ }),
-
 /***/ "./src/warning.js":
 /*!************************!*\
   !*** ./src/warning.js ***!
@@ -1024,22 +891,20 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 /* harmony import */ var _warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./warning */ "./src/warning.js");
-/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./input */ "./src/input.js");
-/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
-/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
-/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
-/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
-/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
-/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
-/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
-/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
-/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
-/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
-/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
-/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
-/* harmony import */ var _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/logo copy.svg */ "./src/assets/logo copy.svg");
-/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
-
+/* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
+/* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
+/* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
+/* harmony import */ var _assets_bg_shorten_mobile_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/bg-shorten-mobile.svg */ "./src/assets/bg-shorten-mobile.svg");
+/* harmony import */ var _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icon-brand-recognition.svg */ "./src/assets/icon-brand-recognition.svg");
+/* harmony import */ var _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icon-detailed-records.svg */ "./src/assets/icon-detailed-records.svg");
+/* harmony import */ var _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icon-fully-customizable.svg */ "./src/assets/icon-fully-customizable.svg");
+/* harmony import */ var _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/icon-facebook.svg */ "./src/assets/icon-facebook.svg");
+/* harmony import */ var _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/icon-instagram.svg */ "./src/assets/icon-instagram.svg");
+/* harmony import */ var _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/icon-pinterest.svg */ "./src/assets/icon-pinterest.svg");
+/* harmony import */ var _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/icon-twitter.svg */ "./src/assets/icon-twitter.svg");
+/* harmony import */ var _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/illustration-working.svg */ "./src/assets/illustration-working.svg");
+/* harmony import */ var _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/logo copy.svg */ "./src/assets/logo copy.svg");
+/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/assets/logo.svg");
 
 
 
@@ -1057,29 +922,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var logoImg = document.getElementById('logoImg');
-logoImg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_16__;
+logoImg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_15__;
 var iconOne = document.querySelector('.iconOne');
-iconOne.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_7__;
+iconOne.src = _assets_icon_brand_recognition_svg__WEBPACK_IMPORTED_MODULE_6__;
 var iconTwo = document.querySelector('.iconTwo');
-iconTwo.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_8__;
+iconTwo.src = _assets_icon_detailed_records_svg__WEBPACK_IMPORTED_MODULE_7__;
 var iconThree = document.querySelector('.iconThree');
-iconThree.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_9__;
+iconThree.src = _assets_icon_fully_customizable_svg__WEBPACK_IMPORTED_MODULE_8__;
 var facebook = document.querySelector('.facebook');
-facebook.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_10__;
+facebook.src = _assets_icon_facebook_svg__WEBPACK_IMPORTED_MODULE_9__;
 var instagram = document.querySelector('.instagram');
-instagram.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_11__;
+instagram.src = _assets_icon_instagram_svg__WEBPACK_IMPORTED_MODULE_10__;
 var pinterest = document.querySelector('.pinterest');
-pinterest.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_12__;
+pinterest.src = _assets_icon_pinterest_svg__WEBPACK_IMPORTED_MODULE_11__;
 var twitter = document.querySelector('.twitter');
-twitter.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_13__;
+twitter.src = _assets_icon_twitter_svg__WEBPACK_IMPORTED_MODULE_12__;
 var illustration = document.querySelector('.illustration');
-illustration.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_14__;
+illustration.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_13__;
 var footerLogo = document.querySelector('.footerLogo');
-footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_15__;
+footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_14__;
 (0,_warning__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_input__WEBPACK_IMPORTED_MODULE_2__["default"])();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle87c8de0f9afe98fede76.js.map
+//# sourceMappingURL=bundle9cde2e6bf259cfac5f09.js.map
