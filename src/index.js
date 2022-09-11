@@ -1,5 +1,4 @@
 import './styles/main.scss';
-import warning from './warning'
 
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'
@@ -48,4 +47,28 @@ const footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = footerLogoImport
 
 
+
+
+
+
+function warning() {
+    const link = document.querySelector('input.textBox');
+    const errorMessage = document.querySelector('.warning')
+    const btn = document.querySelector('button.shortenIt');
+
+    btn.addEventListener('click', () => {
+        console.log('test')
+        let linkPlaceholder = document.querySelector('input.textBox::placeholder')
+
+        if (link.value === '') {
+            link.classList.add('active')
+            errorMessage.classList.add('active')
+            linkPlaceholder.classList.add('active');
+        } else {
+            link.classList.remove('active');
+            errorMessage.classList.remove('active');
+            linkPlaceholder.classList.remove('active');
+        }
+    })
+}
 warning();
