@@ -1,7 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -14,13 +13,14 @@ module.exports = {
     clean: true,
     assetModuleFilename: '[name][ext]',
   },
+  watch: true,
   devtool: 'source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
     port: 3000,
-    open: true,
+    open: false,
     hot: true,
     compress: true,
     historyApiFallback: true,
@@ -53,6 +53,12 @@ module.exports = {
       filename: 'index.html',
       template: 'src/template.html',
     }),
-    new BundleAnalyzerPlugin(),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['dist'] },
+      files: ['./dist/*.html'],
+      browser: 'chrome',
+    }),
   ],
 }

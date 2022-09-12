@@ -2,30 +2,81 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/warning.js":
-/*!************************!*\
-  !*** ./src/warning.js ***!
-  \************************/
+/***/ "./src/input.js":
+/*!**********************!*\
+  !*** ./src/input.js ***!
+  \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function warning() {
+function input() {
+  // button variables
+  var inputResultWrapper = document.querySelector('.inputResultContainer'); // textbox & warning variables 
+
+  var textInput = document.querySelector('input.textBox');
   var link = document.querySelector('input.textBox');
-  var errorMessage = document.querySelector('.warning'); // const linkPlaceholder = document.querySelector('input.textBox::placeholder');
+  var errorMessage = document.querySelector('.warning');
+  var errorMessageP = document.querySelector('.warningMessage');
 
   if (link.value === '') {
     link.classList.add('active');
-    errorMessage.classList.add('active'); // linkPlaceholder.classList.add('active');
+    errorMessage.classList.add('active');
   } else {
     link.classList.remove('active');
-    errorMessage.classList.remove('active'); // linkPlaceholder.classList.remove('active');
+    errorMessage.classList.remove('active');
+  } // api request
+
+
+  function fetchRequest() {
+    fetch("https://api.shrtco.de/v2/shorten?url=".concat(textInput.value)).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log(data.result.short_link); // defining structure for URl clicks
+
+      var ul = inputResultWrapper.appendChild(document.createElement('ul'));
+      ul.classList.add('inputUl');
+      var li = ul.appendChild(document.createElement('li'));
+      li.classList.add('inputLi');
+      var pOne = li.appendChild(document.createElement('p'));
+      pOne.classList.add('inputValue');
+      pOne.innerText = "".concat(textInput.value);
+      var div = li.appendChild(document.createElement('div'));
+      div.classList.add('inputContents');
+      var result = div.appendChild(document.createElement('p'));
+      result.classList.add('result');
+      result.innerText = "".concat(data.result.short_link);
+      var btnResult = div.appendChild(document.createElement('button'));
+      btnResult.classList.add('btnResult');
+      btnResult.innerText = 'copy'; // clicked btn style functionality 
+
+      var copyAllBtns = document.querySelectorAll('.btnResult');
+      var finalOutcome = "".concat(data.result.short_link);
+      copyAllBtns.forEach(function (item) {
+        item.addEventListener('click', function () {
+          console.log('clicked');
+          item.innerHTML = 'Clicked!';
+          item.classList.add('active');
+          navigator.clipboard.writeText(finalOutcome);
+        });
+      });
+      textInput.value = '';
+    })["catch"](function (err) {
+      textInput.value = '';
+      console.log(err);
+      console.error('failed to log link');
+      errorMessageP.innerHTML = 'Please enter a valid link';
+      link.classList.add('active');
+      errorMessage.classList.add('active');
+    });
   }
+
+  fetchRequest();
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (warning);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (input);
 
 /***/ }),
 
@@ -882,7 +933,7 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./warning */ "./src/warning.js");
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input */ "./src/input.js");
 /* harmony import */ var _assets_bg_boost_desktop_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bg-boost-desktop.svg */ "./src/assets/bg-boost-desktop.svg");
 /* harmony import */ var _assets_bg_boost_mobile_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/bg-boost-mobile.svg */ "./src/assets/bg-boost-mobile.svg");
 /* harmony import */ var _assets_bg_shorten_desktop_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/bg-shorten-desktop.svg */ "./src/assets/bg-shorten-desktop.svg");
@@ -933,11 +984,10 @@ var illustration = document.querySelector('.illustration');
 illustration.src = _assets_illustration_working_svg__WEBPACK_IMPORTED_MODULE_13__;
 var footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = _assets_logo_copy_svg__WEBPACK_IMPORTED_MODULE_14__;
-var btn = document.querySelector('button.shortenIt');
-btn.addEventListener('click', _warning__WEBPACK_IMPORTED_MODULE_1__["default"]);
-(0,_warning__WEBPACK_IMPORTED_MODULE_1__["default"])();
+var btn = document.querySelector('.shortenIt');
+btn.addEventListener('click', _input__WEBPACK_IMPORTED_MODULE_1__["default"]);
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle1c7457eb004f23e3e1f8.js.map
+//# sourceMappingURL=bundlede30da0b4806295768e0.js.map
