@@ -1,11 +1,14 @@
+// documents
 import './styles/main.scss'
-import input from './input'
+import click from './click'
+import enter from './enter'
+import mobileMenu from './mobileMenu'
 
+// images
 import bgBoostDesktop from './assets/bg-boost-desktop.svg'
 import bgBoostMobile from './assets/bg-boost-mobile.svg'
 import bgShortenDesktop from './assets/bg-shorten-desktop.svg'
 import bgShortenMobile from './assets/bg-shorten-mobile.svg'
-
 import iconBrandRecognition from './assets/icon-brand-recognition.svg'
 import iconDetailedRecords from './assets/icon-detailed-records.svg'
 import iconFullyCustomizable from './assets/icon-fully-customizable.svg'
@@ -17,6 +20,7 @@ import illustrationImport from './assets/illustration-working.svg'
 import footerLogoImport from './assets/logo copy.svg'
 import logo from './assets/logo.svg'
 
+// images to src
 const logoImg = document.getElementById('logoImg')
 logoImg.src = logo
 
@@ -47,5 +51,12 @@ illustration.src = illustrationImport
 const footerLogo = document.querySelector('.footerLogo');
 footerLogo.src = footerLogoImport
 
+
+// modules
 let btn = document.querySelector('.shortenIt');
-btn.addEventListener('click', input);
+btn.addEventListener('click', click);
+
+enter();
+
+let hamburger = document.querySelector('.hamburgerTrigger');
+hamburger.addEventListener('click', mobileMenu);

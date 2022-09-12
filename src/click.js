@@ -1,6 +1,6 @@
-function input() {
+function click() {
     // button variables
-    const inputResultWrapper = document.querySelector('.inputResultContainer');
+    let inputResultWrapper = document.querySelector('.inputResultContainer');
 
     // textbox & warning variables 
     let textInput = document.querySelector('input.textBox')
@@ -69,4 +69,4 @@ function input() {
     fetchRequest();
 }
 
-export default input
+export default click

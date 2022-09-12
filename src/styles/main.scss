@@ -21,48 +21,55 @@ header {
     justify-content: space-between;
     padding: $desktopHeaderPadding;
 
-    .boxOne {
-        @include flexOne;
+    
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-        ul.list {
-            display: flex;
-
-            li {
-                padding: 0 1rem;
-                list-style: none;
-
-                a {
-                    text-decoration: none;
-                    color: $grayishViolet;
-                    text-transform: capitalize;
-                }
-
-                a:hover {
-                    @include hover;
+        .boxOne {
+            @include flexOne;
+    
+            ul.list {
+                display: flex;
+    
+                li {
+                    padding: 0 1rem;
+                    list-style: none;
+    
+                    a {
+                        text-decoration: none;
+                        color: $grayishViolet;
+                        text-transform: capitalize;
+                    }
+    
+                    a:hover {
+                        @include hover;
+                    }
                 }
             }
         }
+    
+        .boxTwo {
+            @include flexOne;
+    
+            button.login {
+                @include button;
+                background-color: transparent;
+                color: $grayishViolet;
+                padding: 0 2rem;
+            }
+    
+            button.login:hover {
+                @include hover;
+            }
+    
+            button.signUp {
+                @include button
+            }
+        }
     }
-
-    .boxTwo {
-        @include flexOne;
-
-        button.login {
-            @include button;
-            background-color: transparent;
-            color: $grayishViolet;
-            padding: 0 2rem;
-        }
-
-        button.login:hover {
-            @include hover;
-        }
-
-        button.signUp {
-            @include button
-        }
-    }
-
 
     .hamburgerTrigger {
         display: none;
@@ -434,24 +441,134 @@ footer {
     header {
         padding: $mobileHeaderPadding;
 
-        .boxOne {
+        nav {
 
-            ul.list {
-                display: none;
+            .boxOne {
+
+                ul.list {
+                    visibility: hidden;
+                    background-color: $darkViolet;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;  
+                    padding: 2rem 0;
+                    position: absolute;
+                    width: calc(100% - 4rem);
+                    left: 2rem;
+                    top: 5rem;
+                    z-index: 2;
+                    border-radius: 0.5rem 0.5rem 0 0;
+                    border-bottom: solid 1px $white;
+
+                    li {
+                    padding: 1rem 0;
+
+                        a {
+                            color: $white;
+                            font-weight: 700;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+    
+            .boxTwo {
+                visibility: hidden;
+                background-color: $darkViolet;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;  
+                padding: 0;
+                position: absolute;
+                width: calc(100% - 4rem);
+                left: 2rem;
+                top: 20rem;
+                z-index: 1;
+                border-radius: 0 0 0.5rem 0.5rem;
+                padding: 1rem 0;
+    
+                button.login {
+                    padding: 2rem 0;
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+
+                button.signUp {
+                    width: calc(100% - 4rem);
+                    margin: 0 0 2rem 0;
+                }
             }
         }
 
-        .boxTwo {
+        nav.active {
 
-            button {
-                display: none;
+            .boxOne {
+
+                ul.list {
+                    visibility: visible;
+                    background-color: $darkViolet;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;  
+                    padding: 2rem 0;
+                    position: absolute;
+                    width: calc(100% - 4rem);
+                    left: 2rem;
+                    top: 5rem;
+                    z-index: 2;
+                    border-radius: 0.5rem 0.5rem 0 0;
+                    border-bottom: solid 1px $white;
+
+                    li {
+                    padding: 1rem 0;
+
+                        a {
+                            color: $white;
+                            font-weight: 700;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+    
+            .boxTwo {
+                visibility: visible;
+                background-color: $darkViolet;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;  
+                padding: 0;
+                position: absolute;
+                width: calc(100% - 4rem);
+                left: 2rem;
+                top: 20rem;
+                z-index: 1;
+                border-radius: 0 0 0.5rem 0.5rem;
+                padding: 1rem 0;
+    
+                button.login {
+                    padding: 2rem 0;
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+
+                button.signUp {
+                    width: calc(100% - 4rem);
+                    margin: 0 0 2rem 0;
+                }
             }
         }
 
         .hamburgerTrigger {
             display: initial;
             position: absolute;
-            top: 2rem;
+            top: 2.5rem;
             right: 2rem;
             content: '';
             width: 30px;
