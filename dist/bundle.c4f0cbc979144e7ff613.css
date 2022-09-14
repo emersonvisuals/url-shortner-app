@@ -644,18 +644,18 @@ footer .footerContents .socials img.active {
     width: calc(100% - 4rem);
     left: 2rem;
     top: 5rem;
-    z-index: 2;
+    z-index: 4;
     border-radius: 0.5rem 0.5rem 0 0;
-    border-bottom: solid 1px white;
+    border-bottom: solid 0.25px hsl(257deg, 7%, 63%);
     transform: translateX(100vw);
   }
   header nav .boxOne ul.list li {
     padding: 1rem 0;
+    font-size: 20px;
   }
   header nav .boxOne ul.list li a {
     color: white;
     font-weight: 700;
-    font-size: 16px;
   }
   header nav .boxTwo {
     visibility: hidden;
@@ -678,65 +678,22 @@ footer .footerContents .socials img.active {
     padding: 2rem 0;
     color: white;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
   }
   header nav .boxTwo button.signUp {
     width: calc(100% - 4rem);
     margin: 0 0 2rem 0;
+    font-size: 20px;
   }
   header nav.active .boxOne ul.list {
     visibility: visible;
-    background-color: hsl(257deg, 27%, 26%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2rem 0;
-    position: absolute;
-    width: calc(100% - 4rem);
-    left: 2rem;
-    top: 5rem;
-    z-index: 2;
-    border-radius: 0.5rem 0.5rem 0 0;
-    border-bottom: solid 1px white;
     transform: translateX(0vw);
     transition: 0.5s all;
-  }
-  header nav.active .boxOne ul.list li {
-    padding: 1rem 0;
-  }
-  header nav.active .boxOne ul.list li a {
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
   }
   header nav.active .boxTwo {
     visibility: visible;
-    background-color: hsl(257deg, 27%, 26%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0;
-    position: absolute;
-    width: calc(100% - 4rem);
-    left: 2rem;
-    top: 20rem;
-    z-index: 1;
-    border-radius: 0 0 0.5rem 0.5rem;
-    padding: 1rem 0;
     transform: translateX(0vw);
     transition: 0.5s all;
-  }
-  header nav.active .boxTwo button.login {
-    padding: 2rem 0;
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  header nav.active .boxTwo button.signUp {
-    width: calc(100% - 4rem);
-    margin: 0 0 2rem 0;
   }
   header .hamburgerTrigger {
     display: initial;
@@ -988,4 +945,4 @@ footer .footerContents .socials img.active {
   }
 }
 
-/*# sourceMappingURL=bundle.6c16d1ef31b9289bede4.css.map*/
+/*# sourceMappingURL=bundle.c4f0cbc979144e7ff613.css.map*/

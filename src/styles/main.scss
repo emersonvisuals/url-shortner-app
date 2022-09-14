@@ -460,6 +460,7 @@ footer {
         nav {
 
             .boxOne {
+               
 
                 ul.list {
                     visibility: hidden;
@@ -473,18 +474,18 @@ footer {
                     width: calc(100% - 4rem);
                     left: 2rem;
                     top: 5rem;
-                    z-index: 2;
+                    z-index: 4;
                     border-radius: 0.5rem 0.5rem 0 0;
-                    border-bottom: solid 1px $white;
+                    border-bottom: solid 0.25px $grayishViolet;
                     transform: translateX(100vw);
 
                     li {
                     padding: 1rem 0;
+                    font-size: $fontSizeNavBar;
 
                         a {
                             color: $white;
                             font-weight: 700;
-                            font-size: 16px;
                         }
                     }
                 }
@@ -511,12 +512,13 @@ footer {
                     padding: 2rem 0;
                     color: $white;
                     font-weight: 700;
-                    font-size: 16px;
+                    font-size: $fontSizeNavBar;
                 }
 
                 button.signUp {
                     width: calc(100% - 4rem);
                     margin: 0 0 2rem 0;
+                    font-size: $fontSizeNavBar;
                 }
             }
         }
@@ -527,63 +529,15 @@ footer {
 
                 ul.list {
                     visibility: visible;
-                    background-color: $darkViolet;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;  
-                    padding: 2rem 0;
-                    position: absolute;
-                    width: calc(100% - 4rem);
-                    left: 2rem;
-                    top: 5rem;
-                    z-index: 2;
-                    border-radius: 0.5rem 0.5rem 0 0;
-                    border-bottom: solid 1px $white;
                     transform: translateX(0vw);
                     transition: 0.5s all;
-
-                    li {
-                    padding: 1rem 0;
-
-                        a {
-                            color: $white;
-                            font-weight: 700;
-                            font-size: 16px;
-                        }
-                    }
                 }
             }
     
             .boxTwo {
                 visibility: visible;
-                background-color: $darkViolet;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;  
-                padding: 0;
-                position: absolute;
-                width: calc(100% - 4rem);
-                left: 2rem;
-                top: 20rem;
-                z-index: 1;
-                border-radius: 0 0 0.5rem 0.5rem;
-                padding: 1rem 0;
                 transform: translateX(0vw);
                 transition: 0.5s all;
-    
-                button.login {
-                    padding: 2rem 0;
-                    color: $white;
-                    font-weight: 700;
-                    font-size: 16px;
-                }
-
-                button.signUp {
-                    width: calc(100% - 4rem);
-                    margin: 0 0 2rem 0;
-                }
             }
         }
 
