@@ -1,5 +1,6 @@
 // documents
 import './styles/main.scss'
+import './footerIcons'
 import click from './click'
 import enter from './enter'
 import mobileMenu from './mobileMenu'

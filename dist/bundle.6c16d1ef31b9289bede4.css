@@ -1,0 +1,991 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
+  \***************************************************************************************************************/
+@keyframes opacityChange {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: poppins;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header nav .boxOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .boxOne ul.list {
+  display: flex;
+}
+header nav .boxOne ul.list li {
+  padding: 0 1rem;
+  list-style: none;
+}
+header nav .boxOne ul.list li a {
+  text-decoration: none;
+  color: hsl(257deg, 7%, 63%);
+  text-transform: capitalize;
+}
+header nav .boxOne ul.list li a:hover {
+  transition: 0.25s all;
+  color: hsl(257deg, 27%, 26%);
+}
+header nav .boxTwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .boxTwo button.login {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(257deg, 7%, 63%);
+  padding: 0 2rem;
+}
+header nav .boxTwo button.login:hover {
+  transition: 0.25s all;
+  color: hsl(257deg, 27%, 26%);
+}
+header nav .boxTwo button.signUp {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+header .hamburgerTrigger {
+  display: none;
+}
+header .hamburgerTrigger .hamburger {
+  display: none;
+}
+
+main section.one {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 8rem;
+}
+main section.one .contentsContainer {
+  width: 35rem;
+  transform: translateY(-5rem);
+  position: relative;
+  z-index: 1;
+}
+main section.one .contentsContainer h1 {
+  font-family: poppins;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+main section.one .contentsContainer p {
+  font-family: poppins;
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(257deg, 7%, 63%);
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+main section.one .contentsContainer button.getStarted {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 2rem 0 0 0;
+}
+main section.one img.illustration {
+  position: absolute;
+  top: 10rem;
+  left: 60vw;
+}
+main section.two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #eff1f7;
+  padding: 2rem 8rem;
+}
+main section.two .inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(257deg, 27%, 26%);
+  background-size: cover;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  border-radius: 0.5rem;
+  background-image: url(bg-boost-desktop.svg);
+  transform: translateY(-7rem);
+}
+main section.two .inputContainer .inputContents {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 1fr;
+  margin: 2rem;
+  width: 100%;
+}
+main section.two .inputContainer .inputContents input.textBox {
+  padding: 0.75rem 0 0.75rem 1rem;
+  font-family: poppins;
+  font-size: 15px;
+  border-radius: 0.5rem;
+  margin: 0 1rem 0 0;
+}
+main section.two .inputContainer .inputContents input.textBox.active::placeholder {
+  color: red;
+}
+main section.two .inputContainer .inputContents input.textBox.active {
+  padding: 0.75rem 0 0.75rem 1rem;
+  font-family: poppins;
+  font-size: 15px;
+  border-radius: 0.5rem;
+  color: hsl(0deg, 87%, 67%);
+  margin: 0 1rem 0 0;
+  border: 3px solid hsl(0deg, 87%, 67%);
+}
+main section.two .inputContainer .inputContents button.shortenIt {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+main section.two .inputContainer .inputContents .warning {
+  visibility: hidden;
+}
+main section.two .inputContainer .inputContents .warning p {
+  margin: 0;
+  padding: 0;
+  transform: translateY(1rem);
+  color: hsl(0deg, 87%, 67%);
+  text-transform: capitalize;
+  font-style: italic;
+}
+main section.two .inputContainer .inputContents .warning.active {
+  visibility: visible;
+}
+main section.two .inputResultContainer {
+  width: 100%;
+  transform: translateY(-7rem);
+}
+main section.two .inputResultContainer ul.inputUl {
+  text-decoration: none;
+  list-style: none;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+main section.two .inputResultContainer ul.inputUl li.inputLi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+}
+main section.two .inputResultContainer ul.inputUl li.inputLi .inputContents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.two .inputResultContainer ul.inputUl li.inputLi .inputContents .result {
+  color: hsl(180deg, 66%, 49%);
+}
+main section.two .inputResultContainer ul.inputUl li.inputLi .inputContents button.btnResult {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin: 0 0 0 1rem;
+}
+main section.two .inputResultContainer ul.inputUl li.inputLi .inputContents button.btnResult.active {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: hsl(255deg, 11%, 22%);
+  color: white;
+  border-radius: 0.5rem;
+}
+main section.three {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8rem;
+  background-color: #eff1f7;
+  height: 75vh;
+}
+main section.three .subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 30rem;
+  margin: 0 0 15rem 0;
+}
+main section.three .subheading h2 {
+  font-family: poppins;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 40px;
+  color: hsl(257deg, 27%, 26%);
+  margin: 0 0 2rem 0;
+}
+main section.three .subheading p {
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+main section.three .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2%;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 10rem 0;
+}
+main section.three .boxes .brandRecognition {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  padding: 5rem 2rem;
+  border-radius: 0.5rem;
+  transform: translateY(-9rem);
+}
+main section.three .boxes .brandRecognition .iconOneBackCircle {
+  background-color: hsl(257deg, 27%, 26%);
+  border-radius: 4rem;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -7.4rem;
+}
+main section.three .boxes .brandRecognition h3 {
+  font-family: poppins;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 25px;
+  color: hsl(257deg, 27%, 26%);
+  margin: -3rem 0 1rem 0;
+}
+main section.three .boxes .brandRecognition p {
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  margin: 0;
+  padding: 0;
+}
+main section.three .boxes .detailedRecords {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  padding: 5rem 2rem;
+  border-radius: 0.5rem;
+  transform: translateY(-6rem);
+}
+main section.three .boxes .detailedRecords .iconTwoBackCircle {
+  background-color: hsl(257deg, 27%, 26%);
+  border-radius: 4rem;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -7.4rem;
+}
+main section.three .boxes .detailedRecords h3 {
+  font-family: poppins;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 25px;
+  color: hsl(257deg, 27%, 26%);
+  margin: -3rem 0 1rem 0;
+}
+main section.three .boxes .detailedRecords p {
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  margin: 0;
+  padding: 0;
+}
+main section.three .boxes .fullyCustomizable {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  padding: 5rem 2rem;
+  border-radius: 0.5rem;
+  transform: translateY(-3rem);
+}
+main section.three .boxes .fullyCustomizable .iconThreeBackCircle {
+  background-color: hsl(257deg, 27%, 26%);
+  border-radius: 4rem;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -7.4rem;
+}
+main section.three .boxes .fullyCustomizable h3 {
+  font-family: poppins;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 25px;
+  color: hsl(257deg, 27%, 26%);
+  margin: -3rem 0 1rem 0;
+}
+main section.three .boxes .fullyCustomizable p {
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  margin: 0;
+  padding: 0;
+}
+main section.three::after {
+  content: "";
+  position: absolute;
+  width: calc(100vw - 18rem);
+  height: 10px;
+  background-color: hsl(180deg, 66%, 49%);
+  z-index: 0;
+}
+main section.four {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 15rem;
+  background-image: url(bg-boost-desktop.svg);
+  background-color: hsl(257deg, 27%, 26%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main section.four h2 {
+  font-family: poppins;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 40px;
+  color: hsl(257deg, 27%, 26%);
+  color: white;
+  margin: 0 0 2rem 0;
+}
+main section.four button.getStarted {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgb(0, 0, 0);
+  height: 15rem;
+  padding: 0 8rem;
+  padding-top: 3rem;
+}
+footer img.footerLogo {
+  transform: translateY(0.5rem);
+}
+footer .footerContents {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 0;
+}
+footer .footerContents .footerList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0;
+}
+footer .footerContents .footerList ul.one {
+  list-style: none;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+footer .footerContents .footerList ul.one li.header {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+footer .footerContents .footerList ul.one li {
+  padding: 0.25rem 0;
+}
+footer .footerContents .footerList ul.one li a {
+  color: hsl(0deg, 0%, 75%);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer .footerContents .footerList ul.two {
+  list-style: none;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+footer .footerContents .footerList ul.two li.header {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+footer .footerContents .footerList ul.two li {
+  padding: 0.25rem 0;
+}
+footer .footerContents .footerList ul.two li a {
+  color: hsl(0deg, 0%, 75%);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer .footerContents .footerList ul.three {
+  list-style: none;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+footer .footerContents .footerList ul.three li.header {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+footer .footerContents .footerList ul.three li {
+  padding: 0.25rem 0;
+}
+footer .footerContents .footerList ul.three li a {
+  color: hsl(0deg, 0%, 75%);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer .footerContents .socials {
+  transform: translateY(0.5rem);
+}
+footer .footerContents .socials img {
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+footer .footerContents .socials img.active {
+  filter: invert(61%) sepia(44%) saturate(630%) hue-rotate(131deg) brightness(97%) contrast(99%);
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    padding: 2rem 3rem;
+  }
+  main section.one {
+    padding: 2rem 3rem;
+  }
+  main section.two {
+    padding: 2rem 3rem;
+  }
+  main section.three {
+    height: 50rem;
+    padding: 2rem 3rem;
+  }
+  footer {
+    padding: 2rem 3rem;
+  }
+}
+@media only screen and (max-width: 775px) {
+  header {
+    padding: 1rem 2rem;
+  }
+  header nav .boxOne ul.list {
+    visibility: hidden;
+    background-color: hsl(257deg, 27%, 26%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    position: absolute;
+    width: calc(100% - 4rem);
+    left: 2rem;
+    top: 5rem;
+    z-index: 2;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: solid 1px white;
+    transform: translateX(100vw);
+  }
+  header nav .boxOne ul.list li {
+    padding: 1rem 0;
+  }
+  header nav .boxOne ul.list li a {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  header nav .boxTwo {
+    visibility: hidden;
+    background-color: hsl(257deg, 27%, 26%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    width: calc(100% - 4rem);
+    left: 2rem;
+    top: 20rem;
+    z-index: 1;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1rem 0;
+    transform: translateX(100vw);
+  }
+  header nav .boxTwo button.login {
+    padding: 2rem 0;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  header nav .boxTwo button.signUp {
+    width: calc(100% - 4rem);
+    margin: 0 0 2rem 0;
+  }
+  header nav.active .boxOne ul.list {
+    visibility: visible;
+    background-color: hsl(257deg, 27%, 26%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    position: absolute;
+    width: calc(100% - 4rem);
+    left: 2rem;
+    top: 5rem;
+    z-index: 2;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: solid 1px white;
+    transform: translateX(0vw);
+    transition: 0.5s all;
+  }
+  header nav.active .boxOne ul.list li {
+    padding: 1rem 0;
+  }
+  header nav.active .boxOne ul.list li a {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  header nav.active .boxTwo {
+    visibility: visible;
+    background-color: hsl(257deg, 27%, 26%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    width: calc(100% - 4rem);
+    left: 2rem;
+    top: 20rem;
+    z-index: 1;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1rem 0;
+    transform: translateX(0vw);
+    transition: 0.5s all;
+  }
+  header nav.active .boxTwo button.login {
+    padding: 2rem 0;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  header nav.active .boxTwo button.signUp {
+    width: calc(100% - 4rem);
+    margin: 0 0 2rem 0;
+  }
+  header .hamburgerTrigger {
+    display: initial;
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 0;
+  }
+  header .hamburgerTrigger .hamburger {
+    position: absolute;
+    display: initial;
+    content: "";
+    top: 1rem;
+    width: 30px;
+    height: 3px;
+    background-color: hsl(0deg, 0%, 75%);
+    z-index: 1;
+  }
+  header .hamburgerTrigger .hamburger::after {
+    position: absolute;
+    display: initial;
+    content: "";
+    top: 1rem;
+    width: 30px;
+    height: 3px;
+    background-color: hsl(0deg, 0%, 75%);
+    z-index: 1;
+    transform: translateY(-0.5rem);
+  }
+  header .hamburgerTrigger .hamburger::before {
+    position: absolute;
+    display: initial;
+    content: "";
+    top: 1rem;
+    width: 30px;
+    height: 3px;
+    background-color: hsl(0deg, 0%, 75%);
+    z-index: 1;
+    transform: translateY(-1.5rem);
+  }
+  main section.one {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 60rem;
+    padding: 0 2rem;
+    overflow-x: hidden;
+  }
+  main section.one .contentsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+  }
+  main section.one .contentsContainer h1 {
+    font-family: poppins;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    font-size: 55px;
+  }
+  main section.one .contentsContainer p {
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(257deg, 7%, 63%);
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    font-size: 15px;
+    padding: 1rem 0;
+  }
+  main section.one .contentsContainer button.getStarted {
+    margin: 0 0 2rem 0;
+  }
+  main section.one img.illustration {
+    left: 3rem;
+  }
+  main section.two {
+    padding: 0 2rem;
+    padding-top: 2rem;
+  }
+  main section.two .inputContainer .inputContents {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem;
+  }
+  main section.two .inputContainer .inputContents input.textBox {
+    margin: 0;
+  }
+  main section.two .inputContainer .inputContents input.textBox.active {
+    margin: 0;
+  }
+  main section.two .inputContainer .inputContents button.shortenIt {
+    margin: 1rem 0 0 0;
+  }
+  main section.two .inputContainer .inputContents p.warningMessage {
+    transform: translateY(0.5rem);
+  }
+  main section.two .inputResultContainer {
+    margin: 0 0 4rem 0;
+  }
+  main section.two .inputResultContainer ul.inputUl li.inputLi {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main section.two .inputResultContainer ul.inputUl li.inputLi .inputValue {
+    padding: 0.5rem 0 1rem 0;
+    margin: 0;
+  }
+  main section.two .inputResultContainer ul.inputUl li.inputLi .inputContents {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    border-top: solid 3px #eff1f7;
+  }
+  main section.two .inputResultContainer ul.inputUl li.inputLi .inputContents p.inputValue {
+    margin: 0;
+    padding: 0;
+  }
+  main section.two .inputResultContainer ul.inputUl li.inputLi .inputContents button.btnResult {
+    margin: 0;
+    width: 100%;
+  }
+  main section.three {
+    padding: 8rem 2rem;
+    height: 65rem;
+  }
+  main section.three .subheading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+  }
+  main section.three .subheading h2 {
+    font-family: poppins;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    font-size: 45px;
+  }
+  main section.three .subheading p {
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(257deg, 7%, 63%);
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    font-size: 15px;
+    z-index: 0;
+  }
+  main section.three .boxes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: auto;
+    text-align: center;
+    padding: 0 0 3rem 0;
+  }
+  main section.three .boxes .brandRecognition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main section.three .boxes .detailedRecords {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main section.three .boxes .fullyCustomizable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main section.three::after {
+    height: 1000px;
+    width: 10px;
+  }
+  main section.four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  main section.four h2 {
+    font-family: poppins;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+  footer {
+    height: auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  footer .footerLogo {
+    padding: 5rem 0 3rem 0;
+  }
+  footer .footerContents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  footer .footerContents .footerList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  footer .footerContents .footerList ul {
+    padding: 0;
+    margin: 0;
+  }
+  footer .footerContents .socials {
+    margin: 0;
+    padding: 0;
+    transform: translateY(-5rem);
+  }
+}
+@keyframes opacityChange {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+/*# sourceMappingURL=bundle.6c16d1ef31b9289bede4.css.map*/

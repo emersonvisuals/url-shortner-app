@@ -1,4 +1,5 @@
 @import "./_variables";
+@import "./_keyframes";
 
 html {
     overflow-x: hidden;
@@ -415,9 +416,15 @@ footer {
                 padding: 0 0.5rem;
                 cursor: pointer;
             }
+
+            img.active {
+                filter: invert(61%) sepia(44%) saturate(630%) hue-rotate(131deg) brightness(97%) contrast(99%);
+            }
         }
     }
 }
+
+
 
 @media only screen and (max-width: 1000px) {
     header {
@@ -433,10 +440,19 @@ footer {
         section.two {
             padding: $tabletPadding;
         }
+
+        section.three {
+            height: 50rem;
+            padding: $tabletPadding;
+        }
+    }
+
+    footer {
+        padding: $tabletPadding;
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 775px) {
     
     header {
         padding: $mobileHeaderPadding;
@@ -460,6 +476,7 @@ footer {
                     z-index: 2;
                     border-radius: 0.5rem 0.5rem 0 0;
                     border-bottom: solid 1px $white;
+                    transform: translateX(100vw);
 
                     li {
                     padding: 1rem 0;
@@ -488,6 +505,7 @@ footer {
                 z-index: 1;
                 border-radius: 0 0 0.5rem 0.5rem;
                 padding: 1rem 0;
+                transform: translateX(100vw);
     
                 button.login {
                     padding: 2rem 0;
@@ -522,6 +540,8 @@ footer {
                     z-index: 2;
                     border-radius: 0.5rem 0.5rem 0 0;
                     border-bottom: solid 1px $white;
+                    transform: translateX(0vw);
+                    transition: 0.5s all;
 
                     li {
                     padding: 1rem 0;
@@ -550,6 +570,8 @@ footer {
                 z-index: 1;
                 border-radius: 0 0 0.5rem 0.5rem;
                 padding: 1rem 0;
+                transform: translateX(0vw);
+                transition: 0.5s all;
     
                 button.login {
                     padding: 2rem 0;
@@ -796,4 +818,9 @@ footer {
             }
         }
     }
+}
+
+@keyframes opacityChange {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
